@@ -43,6 +43,7 @@
     text-shadow: 5px 5px 0px #3E2E0C, 3px 3px 0px #3E2E0C;
 }
 #brand-logo > p:first-of-type{left: 12%;}
+#brand-logo > p:nth-of-type(2){right: 12%;}
 #login{
     width: 50%;
     height: 100%;
@@ -52,15 +53,3 @@
     right: 0;
     background-color: lightsalmon;
 }
-/*#brand-logo > p:nth-of-type(2){*/
-/*    right: 12%;*/
-/*}*/
-/*#login{*/
-/*    width: 50%;*/
-/*    height: 100%;*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    bottom: 0;*/
-/*    right: 0;*/
-/*    background-color: blue;*/
-/*}*/
