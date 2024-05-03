@@ -5,7 +5,29 @@
     <title>Hello Shoes</title>
 
     <link rel="stylesheet" href="assets/css/body-login.css">
+    <link rel="stylesheet" href="assets/css/body-menu.css">
     <link rel="stylesheet" href="assets/css/normalization.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100&family=Oxygen:wght@300&family=Tilt+Prism&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Monoton&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&family=Monoton&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&family=Monoton&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="body-login" class="login-page-container">
@@ -25,7 +47,65 @@
         </p>
     </div>
     <div id="login">
+        <p>log in</p>
 
+        <div id="input-username-icon"><img src="assets/img/people.png" alt="" height="80%" width="auto"></div>
+        <input type="text" name="" id="input-username">
+        <label for="input-username" class="error">There is an error in the username</label>
+
+        <div id="input-password-icon"><img src="assets/img/lock.png" alt="" height="80%" width="auto"></div>
+        <input type="password" name="" id="input-password">
+        <div id="input-password-show-icon"><img src="assets/img/hidden.png" alt=""></div>
+        <label for="input-password" class="error">There is an error in the password</label>
+
+        <button>LOG IN</button>
+    </div>
+</div>
+<div id="body-menu">
+    <div id="menu-sidebar">
+        <div id="sidebar-user">
+            <div class="profile-img"><img src="assets/img/people.png" alt="" height="60%" width="auto"></div>
+            <p class="credential-lbl">ADMIN</p>
+            <p class="username-lbl">admin@gmail.com</p>
+        </div>
+        <div id="sidebar-menu">
+            <div class="sale sidebar-menu-primary-services">sale</div>
+            <div class="supplier sidebar-menu-primary-services">supplier</div>
+            <div class="customer sidebar-menu-primary-services">customer</div>
+            <div class="employee sidebar-menu-primary-services">employee</div>
+            <div class="inventory sidebar-menu-primary-services">inventory</div>
+            <div class="admin sidebar-menu-primary-services">admin</div>
+            <div class="user-service sidebar-menu-primary-services">user services</div>
+        </div>
+    </div>
+    <div id="menu">
+        <div class="header menu-item">
+            <div class="hamburger header-item"><img src="assets/img/hamburger.png" alt="hamburg-menu" height="90%" width="auto"></div>
+            <div class="pos header-item"><img src="assets/img/cashier.png" alt="hamburg-menu" height="90%" width="auto"></div>
+            <div class="chat header-item"><img src="assets/img/chat.png" alt="hamburg-menu" height="90%" width="auto"></div>
+        </div>
+        <div class="summary menu-item">
+            <div class="sales-today sales-sum"></div>
+            <div class="top-hours-today sales-sum"></div>
+            <div class="payment-method sales-sum"></div>
+            <div class="today-gross sales-sum"></div>
+        </div>
+        <div class="graphs menu-item">
+            <div>
+                <div class="sale-improvement graph">
+                    <p>Sale Improvement</p>
+                </div>
+                <div class="sale-strength graph">
+                    <p>Sale Strength</p>
+                </div>
+                <div class="top-product graph">
+                    <p>Top Product</p>
+                </div>
+                <div class="top-category graph">
+                    <p>Top Category</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

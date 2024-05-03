@@ -1,0 +1,262 @@
+#body-menu{
+    width: 100%;
+    height: 100%;
+
+    background-color:white;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    opacity: 0;
+}
+#menu-sidebar{
+    background-color: #FDC611;
+    width: 20%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#sidebar-user{
+    width: 80%;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2%;
+    margin: auto;
+}
+#sidebar-user > .profile-img{
+    height: 45%;
+    aspect-ratio: 1/1;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+    margin: auto;
+
+    background-color: white;
+    border-radius: 50%;
+}
+#sidebar-user > .profile-img > img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    opacity: 80%;
+}
+#sidebar-user > .credential-lbl{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55%;
+    margin: auto;
+
+    text-align: center;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /*text-transform: uppercase;*/
+    -webkit-text-fill-color: dimgrey;
+    font-size: 1.5vw;
+}
+#sidebar-user > .username-lbl{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 65%;
+    margin: auto;
+
+    text-align: center;
+    font-family: "Candara Light";
+    font-weight: 300;
+    font-style: normal;
+    -webkit-text-fill-color: dimgrey;
+    font-size: 1.5vw;
+}
+#sidebar-menu{
+    display: grid;
+    grid-template-columns: [first] 95% [last];
+    grid-template-rows:[row1-start] 1fr   [row2] 1fr     [row3] 1fr     [row4] 1fr     [row5] 1fr     [row6] 1fr     [row7] 1fr     [row7-end];
+    row-gap: 8px;
+
+    background-color: transparent;
+    height: 60%;
+    width: 90%;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2%;
+    margin: auto;
+}
+#sidebar-menu > .sidebar-menu-primary-services {
+    grid-column-start: first;
+    grid-column-end: last;
+    background-color: transparent;
+
+    text-align: right;
+    font-family: "Candara Light";
+    font-weight: 300;
+    font-style: normal;
+    -webkit-text-fill-color: dimgrey;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+#menu{
+    width: 79%;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: [first] 100% [last];
+    grid-template-rows:[row1-start] 1fr   [row2] 3fr     [row3] 7fr     [row3-end];
+    row-gap: 10px;
+    column-gap: 10px;
+}
+#menu >  .menu-item{
+    grid-column-start: first;
+    grid-column-end: last;
+}
+#menu > .header{
+    background-color: transparent;
+
+    position: relative;
+}
+#menu > .header > .hamburger{
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    cursor: pointer;
+}
+#menu > .header > .header-item > img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    opacity: 80%;
+}
+#menu > .header > .pos {
+    width: 42px;
+    height: 42px;
+    background-color: transparent;
+
+    position: absolute;
+    right: 65px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    cursor: pointer;
+}
+#menu > .header > .chat{
+    width: 42px;
+    height: 42px;
+    background-color: transparent;
+
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    cursor: pointer;
+}
+#menu > .summary{
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: [col1-start] 1fr     [col2] 1fr     [col3] 1fr     [col4] 1fr        [col4-fin];
+    grid-template-rows: [start] 100% [fin];
+    column-gap: 15px;
+    row-gap: 30px;
+
+}
+#menu > .summary > .sales-sum{
+    /*background-color: green;*/
+
+    height: 80%;
+    width: 97%;
+    align-self: center;
+
+    border-radius: 30px;
+}
+#menu > .summary > .sales-today{
+    background-color: #EF6168;
+}
+#menu > .summary > .top-hours-today{
+    background-color: #8AD788;
+}
+#menu > .summary > .payment-method{
+    background-color: #C5ACE3;
+}
+#menu > .summary > .today-gross{
+    background-color: #EFE861;
+}
+#menu > .graphs{
+    background-color: transparent;
+    overflow-y: scroll;
+}
+#menu > .graphs > div:first-of-type{
+    height: 120vh;
+    width: 100%;
+
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: [col1-start] 1fr [col2] 1fr [col2-end];
+    grid-template-rows: [row1-start] 1fr [row2] 1fr [row2-fin];
+    column-gap: 10px;
+    row-gap: 10px;
+}
+#menu > .graphs > div:first-of-type > .graph{
+    position: relative;
+
+    border-radius: 30px;
+    background-color: whitesmoke;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#menu > .graphs > div:first-of-type > .graph > p:first-of-type{
+    font-family: "Inter",sans-serif;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-fill-color: dimgrey;
+    font-size: 2vw;
+
+    position: absolute;
+    left: 3.4%;
+    top: 3%;
+    margin: auto;
+}
