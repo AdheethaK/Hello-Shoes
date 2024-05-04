@@ -11,7 +11,7 @@
     right: 0;
     margin: auto;
 
-    z-index: 9;
+    z-index: 0;
 
     display: grid;
     grid-template-columns: [col1-first] 5% [col2] 40% [col3] 55% [col3-fin];
