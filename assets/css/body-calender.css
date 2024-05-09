@@ -1,0 +1,11 @@
+.date-picker{
+    width: 100%;
+    font-size: 1.1vw;
+    /*border-bottom: 3px solid darkblue;*/
+    font-family: "Prosto One", sans-serif;
+    /*text-transform: uppercase;*/
+    -webkit-text-fill-color: dimgrey;
+
+    border: none;
+    border-bottom: 2px solid lightgrey;
+}

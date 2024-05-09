@@ -1,0 +1,128 @@
+#body-customer > div:nth-of-type(2) > .customer-box:nth-of-type(5){
+    user-select: none;
+    position: relative;
+}
+#body-customer > div:nth-of-type(2) > .customer-box:nth-of-type(5):focus{
+    outline: none;
+}
+.options-view-btn-level{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+.options-view-btn-level:checked + .select-btn .chevron i {
+    color: #2d3667;
+}
+.options-view-btn-level:checked ~ .option{
+    border: 1px solid #e23d3d;
+    border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+/*-----------------#options----------------*/
+.option-sub-level i {
+    width: 16px;
+    height: 16px;
+}
+.option-sub-level .label{
+    color: #2d3667;
+    font-size: 16px;
+}
+.option-sub-level{
+    position: absolute;
+    left: 0;
+    width: 250px;
+}
+.option-sub-level{
+    position: relative;
+    line-height: 1;
+    transition: 0.3s ease all;
+    z-index: 2;
+    font-family: "Prosto One", sans-serif;
+}
+.option-sub-level i{
+    position: absolute;
+    left: 14px;
+    padding: 0;
+    display: none;
+}
+.options-view-btn-level:checked ~ .option .option-sub-level i{
+    display: block;
+    padding: 12px 0;
+}
+.options-view-btn-level:checked ~ .option .label{
+    display: block;
+    padding: 12px 14px;
+}
+.option-sub-level input[type="radio"]:checked ~ .opt-val{
+    opacity: 1;
+    transform: scale(1);
+}
+.option-sub-level input[type="radio"]:checked~i{
+    top: 0;
+    bottom: auto;
+    opacity: 1;
+    animation: unset;
+}
+.option-sub-level input[type="radio"]:checked~i,
+.option-sub-level input[type="radio"]:checked~.label{
+    color: #ffffff;
+}
+.option-sub-level input[type="radio"]:checked ~.label:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: -1;
+}
+.options-view-btn-level:not(:checked)~.option .option-sub-level
+input[type="radio"]:checked ~.opt-val {
+    top: -30px;
+}
+.option-sub-level:nth-child(1) input[type="radio"]:checked ~.label:before{
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+.option-sub-level:nth-child(1) input[type="radio"]:checked ~.opt-val{
+    top: -31px;
+}
+.option-sub-level:nth-child(2) input[type="radio"]:checked ~ .label:before{
+    background-color: #ea4c89;
+}
+.option-sub-level:nth-child(2) input[type="radio"]:checked ~.opt-val{
+    top: -71px;
+}
+
+.option-sub-level .fa-person{
+    color: #000;
+}
+.option-sub-level .fa-person-dress{
+    color: #ea4c89;
+}
+.option-sub-level:hover .label{
+    color: #fff;
+}
+.option-sub-level:nth-child(1):hover ~#option-bg{
+    top: 0;
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+.option-sub-level:nth-child(2):hover ~#option-bg{
+    top: 40px;
+    background-color: #ea4c89;
+    /*border-radius: 4px 4px 0 0;*/
+}
+/*-----------------------------------*/
+.options-view-btn-level:checked ~ .option #option-bg{
+    display: block;
+}

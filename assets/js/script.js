@@ -65,3 +65,16 @@ $("#body-user-service > div > .btn-back-to-menu").on('click',()=>{
     $("#body-user-service").css("left","-100%").css("z-index",0);
     $("#body-menu").css("z-index",1);
 })
+$(document).ready(function(){
+    $("select.level").change(function(){
+        var selectedLevel = $(this).children("option:selected").val();
+
+        switch (selectedLevel){
+            case 'red' : $(".icon > i").css("-webkit-text-fill-color","red");break;
+            case 'bronze' : $(".icon > i").css("-webkit-text-fill-color","#FDB835");break;
+            case 'silver' : $(".icon > i").css("-webkit-text-fill-color","#A6A8AB");break;
+            case 'gold' : $(".icon > i").css("-webkit-text-fill-color","#8F784D");break;
+            case 'platinum' : $(".icon > i").css("-webkit-text-fill-color","#18242C");break;
+        }
+    });
+});

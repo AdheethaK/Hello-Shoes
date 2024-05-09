@@ -73,7 +73,7 @@
     grid-column-start: start;
     grid-column-end: fin;
     background-color: white;
-    border: 1px grey solid;
+    /*border: 1px grey solid;*/
 
     position: relative;
 
@@ -107,11 +107,21 @@
     border-bottom: 2px solid lightgrey;
     background-color: transparent;
 
-    font-size: 1.3vw;
+    font-size: 1vw;
     /*border-bottom: 3px solid darkblue;*/
     font-family: "Prosto One", sans-serif;
     /*text-transform: uppercase;*/
     -webkit-text-fill-color: dimgrey;
+}
+.input-txt::placeholder{
+    -webkit-text-fill-color: lightgrey;
+}
+#body-customer > div:nth-of-type(2) > .customer-box > .date-picker{
+    grid-column-start: col2;
+    /*grid-column-end: col2;*/
+    grid-row-start: row1;
+    /*grid-row-end: row2;*/
+    background-color: white;
 }
 #body-customer > div:nth-of-type(2) > .customer-box > .error{
     grid-column-start: col2;
@@ -121,18 +131,104 @@
 
     background-color: white;
     font-family: "Julius Sans One", sans-serif;
-    font-weight: 400;
+    /*font-weight: 400;*/
     font-style: normal;
     /*text-transform: uppercase;*/
     -webkit-text-fill-color: red;
-    font-size: 1vw;
+    font-size: 0.8vw;
+    font-weight: bold;
     align-content: space-evenly;
     text-align: right;
+}
+#body-customer > div:nth-of-type(2) > .customer-box:nth-of-type(5) > .choose-level{
+    display: grid;
+    grid-template-rows: [start] 1fr [end];
+    grid-template-columns: [col1-start] 0.6fr [col2] 5.4fr [col2-fin];
+}
+.icon{
+    grid-column-start: col1-start;
+    grid-row-start: start;
+    background-color: transparent;
+
+    position: relative;
+}
+.icon > i{
+    position: absolute;
+    left: 5.5px;
+    top: 15px;
+    padding: 0;
+    display: block;
+}
+#levels{
+    grid-column-start: col2;
+    grid-row-start: start;
+
+    border: 0px;
+    outline: 0px;
+    border-bottom: 2px solid lightgrey;
+    background-color: white;
+    font-size: 1.2vw;
+    /*border-bottom: 3px solid darkblue;*/
+    font-family: "Prosto One", sans-serif;
+    /*text-transform: uppercase;*/
+    -webkit-text-fill-color: dimgrey;
+    /*text-transform: uppercase;*/
+    /*-webkit-text-fill-color: red;*/
+    /*font-size: 1vw;*/
+    align-content: space-evenly;
+    text-align: left;
 }
 /*3rd div*/
 #body-customer > div:nth-of-type(3){
     grid-column-start: col3;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [fin];
+    grid-template-rows: [col1-start] 0.8fr [col2] 1.2fr [col2-fin];
+}
+#body-customer > div:nth-of-type(3) > div:first-of-type{
+    grid-column-start: start;
+    grid-row-start: col1-start;
+    background-color: transparent;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2){
+    grid-column-start: start;
+    grid-row-start: col2;
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [fin];
+    grid-template-rows: [col1-start] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [col5] 1fr [col5-fin];
+    row-gap: 5px;
+    column-gap: 10px;
+    justify-items: center;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button{
+    width: 50px;
+    height: 50px;
+
+    background-color: white;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type{
+    background-color: plum;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2){
+    background-color: palegreen;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3){
     background-color: lightskyblue;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4){
+    background-color: yellow;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5){
+    background-color: red;
 }
 /*4th div*/
 #body-customer > div:nth-of-type(4){
