@@ -1,0 +1,269 @@
+#body-customer > div:nth-of-type(2) > .customer-box:nth-of-type(3){
+    user-select: none;
+    position: relative;
+}
+#body-customer > div:nth-of-type(2) > .customer-box:nth-of-type(3):focus{
+    outline: none;
+}
+.brd{
+    border: 1px solid #e2eded;
+    border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+#select-btn{
+    position: relative;
+    grid-column-start: col2;
+    grid-row-start: row1;
+
+    padding: 12px 14px;
+    border-bottom: 2px solid lightgrey;
+    background-color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-size: 1.3vw;
+    /*border-bottom: 3px solid darkblue;*/
+    font-family: "Prosto One", sans-serif;
+    /*text-transform: uppercase;*/
+    -webkit-text-fill-color: dimgrey;
+}
+#options-view-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+#selected-value{
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 26px;
+}
+#chevron{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    padding: 9px 14px;
+}
+#chevron i {
+    display: block;
+    height: 50%;
+    color: #d1dede;
+    font-size: 12px;
+    text-align: right;
+}
+#options-view-btn:checked + #select-btn #chevron i {
+    color: #2d3667;
+}
+/*-----------------#options----------------*/
+.option i {
+    width: 16px;
+    height: 16px;
+}
+.option .label{
+    color: #2d3667;
+    font-size: 16px;
+}
+.option{
+    position: absolute;
+    left: 0;
+    width: 250px;
+}
+#options{
+    position: absolute;
+    top: 42px;
+    right: 0;
+    left: 205.5px;
+    width: 342px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 9;
+}
+#options-view-btn:checked ~ #options{
+    border: 1px solid #e23d3d;
+    border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+.option{
+    position: relative;
+    line-height: 1;
+    transition: 0.3s ease all;
+    z-index: 2;
+    font-family: "Prosto One", sans-serif;
+}
+.option i{
+    position: absolute;
+    left: 14px;
+    padding: 0;
+    display: none;
+}
+#options-view-btn:checked ~ #options .option i{
+    display: block;
+    padding: 12px 0;
+}
+.label{
+    display: none;
+    padding: 0;
+    margin-left: 27px;
+}
+#options-view-btn:checked ~ #options .label{
+    display: block;
+    padding: 12px 14px;
+}
+.s-c{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+.s-c .top{
+    top: 0;
+}
+.s-c .bottom{
+    bottom: 0;
+}
+input[type="radio"]{
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.s-c:hover~i{
+    color: #ffffff;
+    opacity: 0;
+}
+.s-c:hover{
+    height: 100%;
+    z-index: 1;
+}
+@keyframes move_up {
+    0%{
+        bottom: -25px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+@keyframes move_down {
+    0%{
+        top: -25px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+.s-c .bottom:hover + i{
+    bottom: -25px;
+    animation: move_up 0.3s ease 0.1s forwards;
+}
+.s-c .top:hover ~ i{
+    top: -25px;
+    animation: move_down 0.3s ease 0.1s forwards;
+}
+.label{
+    transition: 0.3s ease all;
+}
+.opt-val{
+    position: absolute;
+    left: 14px;
+    width: 250px;
+    height: 21px;
+    opacity: 0;
+    background-color: white;
+    transform: scale(0);
+
+    font-size: 1.2vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color: dimgrey;
+    text-align: right;
+}
+.option input[type="radio"]:checked ~ .opt-val{
+    opacity: 1;
+    transform: scale(1);
+}
+.option input[type="radio"]:checked~i{
+    top: 0;
+    bottom: auto;
+    opacity: 1;
+    animation: unset;
+}
+.option input[type="radio"]:checked~i,
+.option input[type="radio"]:checked~.label{
+    color: #ffffff;
+}
+.option input[type="radio"]:checked ~.label:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: -1;
+}
+#options-view-btn:not(:checked)~#options .option
+input[type="radio"]:checked ~.opt-val {
+    top: -30px;
+}
+.option:nth-child(1) input[type="radio"]:checked ~.label:before{
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+.option:nth-child(1) input[type="radio"]:checked ~.opt-val{
+    top: -31px;
+}
+.option:nth-child(2) input[type="radio"]:checked ~ .label:before{
+    background-color: #ea4c89;
+}
+.option:nth-child(2) input[type="radio"]:checked ~.opt-val{
+    top: -71px;
+}
+
+.option .fa-person{
+    color: #000;
+}
+.option .fa-person-dress{
+    color: #ea4c89;
+}
+#option-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    transition: 0.3s ease all;
+    z-index: 1;
+    display: none;
+}
+#options-view-btn:checked ~#options #option-bg{
+    display: block;
+}
+.option:hover .label{
+    color: #fff;
+}
+.option:nth-child(1):hover ~#option-bg{
+    top: 0;
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+.option:nth-child(2):hover ~#option-bg{
+    top: 40px;
+    background-color: #ea4c89;
+    /*border-radius: 4px 4px 0 0;*/
+}
