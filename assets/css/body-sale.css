@@ -7,14 +7,15 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -100%;
     right: 0;
     margin: auto;
 
     z-index: 0;
 
+
     display: grid;
-    grid-template-columns: [col1-first] 5% [col2] 40% [col3] 55% [col3-fin];
+    grid-template-columns: [col1-first] 5% [col2] 36% [col3] 4% [col4] 55% [col4-fin];
     grid-template-rows: [start] 100% [fin];
 
 }
@@ -36,6 +37,7 @@
 
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 #body-sale > div:first-of-type >p:first-of-type{
     rotate: -90deg;
@@ -63,5 +65,9 @@
 }
 #body-sale > div:nth-of-type(3){
     grid-column-start: col3;
+    background-color: lightskyblue;
+}
+#body-sale > div:nth-of-type(4){
+    grid-column-start: col4;
     background-color: lightsalmon;
 }

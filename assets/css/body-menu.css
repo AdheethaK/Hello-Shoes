@@ -11,6 +11,8 @@
     /*right: 0;*/
     margin: auto;
 
+    z-index: 0;
+
     opacity: 1;
 }
 #menu-sidebar{

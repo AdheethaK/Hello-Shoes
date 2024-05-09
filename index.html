@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="assets/css/body-menu.css">
     <link rel="stylesheet" href="assets/css/body-sale.css">
     <link rel="stylesheet" href="assets/css/body-supplier.css">
+    <link rel="stylesheet" href="assets/css/body-customer.css">
+    <link rel="stylesheet" href="assets/css/body-customer-options.css">
+    <link rel="stylesheet" href="assets/css/body-employee.css">
+    <link rel="stylesheet" href="assets/css/body-inventory.css">
+    <link rel="stylesheet" href="assets/css/body-admin.css">
+    <link rel="stylesheet" href="assets/css/body-user-services.css">
     <link rel="stylesheet" href="assets/css/normalization.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,6 +36,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&family=Monoton&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Inconsolata:wght@200..900&family=Julius+Sans+One&family=Monoton&family=Prosto+One&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&family=Rowdies:wght@300;400;700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="body-login" class="login-page-container">
@@ -112,26 +122,126 @@
 </div>
 <div id="body-sale">
     <div>
-        <button><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
+        <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
         <p>SALE</p>
     </div>
+    <div></div>
     <div></div>
     <div></div>
 </div>
 <div id="body-supplier">
     <div>
-        <button><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
+        <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
         <p>SUPPLIER</p>
     </div>
     <div></div>
     <div></div>
+    <div></div>
 </div>
-<div id="body-customer"></div>
-<div id="body-employee"></div>
-<div id="body-inventory"></div>
-<div id="body-admin"></div>
-<div id="body-user-service"></div>
+<div id="body-customer">
+    <div>
+        <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
+        <p>CUSTOMER</p>
+    </div>
+    <div>
+        <div class="customer-box">
+            <label class="input-lbl">Customer Code :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in customer code</label>
+        </div>
+        <div class="customer-box">
+            <label class="input-lbl">Customer name :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in customer name</label>
+        </div>
+        <div class="customer-box">
+            <label class="input-lbl">Gender :</label>
+            <input type="checkbox" id="options-view-btn">
+            <div id="select-btn" class="brd">
+                <div id="selected-value">
+                    <span>Select your gender</span>
+                </div>
+                <div id="chevron">
+                    <i class="fas fa-chevron-up"></i>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div id="options">
+                <div class ="option">
+                    <input class="s-c top" type="radio" name="platform" value="codepen">
+                    <input class="s-c bottom" type="radio" name="platform" value="male">
+                    <i class="fa-solid fa-person"></i>
+                    <span class="label">Male</span>
+                    <span class="opt-val">Male</span>
+                </div>
+                <div class ="option">
+                    <input class="s-c top" type="radio" name="platform" value="dribble">
+                    <input class="s-c bottom" type="radio" name="platform" value="dribble">
+                    <i class="fa-solid fa-person-dress"></i>
+                    <span class="label">Female</span>
+                    <span class="opt-val">Female</span>
+                </div>
+            </div>
+            <label class="error">there is an error in gender</label>
+        </div>
+        <div class="customer-box">
+            <label class="input-lbl">joined date :    </label>
+            
+            <label class="error">there is an error in joined date</label>
+        </div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+        <div class="customer-box"></div>
+    </div>
+    <div></div>
+    <div></div>
+</div>
+<div id="body-employee">
+    <div>
+        <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
+        <p>EMPLOYEE</p>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div id="body-inventory">
+    <div>
+        <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
+        <p>INVENTORY</p>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div id="body-admin">
+    <div>
+        <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
+        <p>ADMIN</p>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div id="body-user-service">
+    <div>
+        <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
+        <p>USER SERVICES</p>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 
+<script src="https://kit.fontawesome.com/c18851e2e3.js" crossorigin="anonymous"></script>
 <script src="assets/lib/jquery.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
