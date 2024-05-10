@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="assets/css/body-sale.css">
     <link rel="stylesheet" href="assets/css/body-supplier.css">
     <link rel="stylesheet" href="assets/css/body-customer.css">
-    <link rel="stylesheet" href="assets/css/body-customer-options.css">
     <link rel="stylesheet" href="assets/css/body-calender.css">
-    <link rel="stylesheet" href="assets/css/body-customer-level.css">
     <link rel="stylesheet" href="assets/css/body-employee.css">
     <link rel="stylesheet" href="assets/css/body-inventory.css">
     <link rel="stylesheet" href="assets/css/body-admin.css">
@@ -20,27 +18,11 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Tilt+Prism&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100&family=Oxygen:wght@300&family=Tilt+Prism&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Monoton&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&family=Monoton&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&family=Monoton&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Inconsolata:wght@200..900&family=Julius+Sans+One&family=Monoton&family=Prosto+One&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&family=Rowdies:wght@300;400;700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -158,31 +140,15 @@
         </div>
         <div class="customer-box">
             <label class="input-lbl">Gender :</label>
-            <input type="checkbox" class="options-view-btn">
-            <div class="brd select-btn">
-                <div class="selected-value">
-                    <span>Select customer gender</span>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-up"></i>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-            <div class="option">
-                <div class ="option-sub-gender">
-                    <input class="s-c top" type="radio" name="platform" value="codepen">
-                    <input class="s-c bottom" type="radio" name="platform" value="male">
-                    <i class="fa-solid fa-person"></i>
-                    <span class="label">Male</span>
-                    <span class="opt-val">Male</span>
-                </div>
-                <div class ="option-sub-gender">
-                    <input class="s-c top" type="radio" name="platform" value="dribble">
-                    <input class="s-c bottom" type="radio" name="platform" value="dribble">
-                    <i class="fa-solid fa-person-dress"></i>
-                    <span class="label">Female</span>
-                    <span class="opt-val">Female</span>
-                </div>
+            <div class="choose-gender">
+                <div class="icon"><i></i></div>
+                <select id="genders" class="gender">
+                    <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select customer gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="rather-not-say">Rather not say</option>
+                </select>
             </div>
             <label class="error">there is an error in gender</label>
         </div>
@@ -194,8 +160,9 @@
         <div class="customer-box">
             <label class="input-lbl">Level :    </label>
             <div class="choose-level">
-                <div class="icon"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div>
+                <div class="icon"><i class="fa-solid fa-star fa-xl" style="color: transparent;"></i></div>
                 <select id="levels" class="level">
+                    <option value="" disabled selected class="placeholder-select">Select customer level</option>
                     <option value="red">Red</option>
                     <option value="bronze">Bronze</option>
                     <option value="silver">Silver</option>
@@ -259,14 +226,81 @@
     <div>
         <div></div>
         <div>
-            <button><i class="fa-solid fa-plus fa-xl" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-check fa-xl" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass fa-xl" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-rotate-right fa-xl" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-trash fa-xl" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
         </div>
     </div>
-    <div></div>
+    <div>
+        <div>
+            <button class="tbl-search-btn"><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
+            <input type="text">
+        </div>
+        <div>
+            <table id="customer-tbl">
+                <thead>
+                    <tr>
+                        <th>code</th>
+                        <th>name</th>
+                        <th>level</th>
+                        <th>total points</th>
+                        <th>contact no.</th>
+                        <th>email</th>
+                        <th>recent purchase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C001</td>
+                        <td>Kasun Chamara</td>
+                        <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>dummy</td>
+                        <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>dummy</td>
+                        <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                    </tr>
+                    <tr>
+                        <td>C004</td>
+                        <td>dummy</td>
+                        <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>12,000</td>
+                        <td>dummy</td>
+                        <td>kasunChamara@gmail.com</td>
+                        <td>dummy</td>
+                    </tr>
+                    <tr>
+                        <td>C005</td>
+                        <td>dummy</td>
+                        <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <div id="body-employee">
     <div>

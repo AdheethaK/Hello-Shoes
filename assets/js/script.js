@@ -70,11 +70,21 @@ $(document).ready(function(){
         var selectedLevel = $(this).children("option:selected").val();
 
         switch (selectedLevel){
-            case 'red' : $(".icon > i").css("-webkit-text-fill-color","red");break;
-            case 'bronze' : $(".icon > i").css("-webkit-text-fill-color","#FDB835");break;
-            case 'silver' : $(".icon > i").css("-webkit-text-fill-color","#A6A8AB");break;
-            case 'gold' : $(".icon > i").css("-webkit-text-fill-color","#8F784D");break;
-            case 'platinum' : $(".icon > i").css("-webkit-text-fill-color","#18242C");break;
+            case 'red' : $(".choose-level .icon > i").css("-webkit-text-fill-color","red");break;
+            case 'bronze' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#FDB835");break;
+            case 'silver' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#A6A8AB");break;
+            case 'gold' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#8F784D");break;
+            case 'platinum' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#18242C");break;
+        }
+    });
+    $("select.gender").change(function(){
+        var selectedGender = $(this).children("option:selected").val();
+
+        switch (selectedGender){
+            case 'male' : $(".choose-gender .icon > i").replaceWith("<i class=\"fa-solid fa-person fa-2xl\" style=\"color: #74C0FC;\"></i>");break;
+            case 'female' : $(".choose-gender .icon > i").replaceWith("<i class=\"fa-solid fa-person-dress fa-2xl\" style=\"color: #fe1667;\"></i>");break;
+            case 'other' : $(".choose-gender .icon > i").replaceWith("<i class=\"fa-solid fa-person-half-dress fa-2xl\" style=\"color: #FF9800;\"></i>");break;
+            case 'rather-not-say' : $(".choose-gender .icon > i").replaceWith("<i class=\"fa-solid fa-neuter fa-2xl\" style=\"color: #4cfe0b;\"></i>");break;
         }
     });
 });
