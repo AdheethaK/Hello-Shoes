@@ -61,7 +61,89 @@
 #body-inventory > div:nth-of-type(2){
     grid-column-start: col2;
     background-color: lightgrey;
+
+    display: grid;
+    grid-template-columns: [start] 100% [fin];
+    grid-template-rows: [row1-start] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr [row6] 1fr [row7] 1fr [row8]
+ 1fr [row9] 1fr [row10] 1fr [row11] 1fr [row11-fin];
 }
+#body-inventory > div:nth-of-type(2) > .inventory-box{
+    grid-column-start: start;
+    grid-column-end: fin;
+    background-color: pink;
+    border: 1px grey solid;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: [col1-start] 1.5fr [col2] 2.5fr [col2-fin];
+    grid-template-rows: [row1-start] 2fr [row2] 1fr [row2-fin];
+}
+#body-inventory > div:nth-of-type(2) > .inventory-box > .input-lbl{
+    grid-column-start: col1-start;
+    grid-row-start: row1-start;
+
+    background-color: white;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-fill-color: dimgrey;
+    font-size: 1.3vw;
+    align-content: space-evenly;
+    text-align: right;
+}
+#body-inventory > div:nth-of-type(2) > .inventory-box > .input-txt{
+    border:none;
+    outline:none;
+    display:inline-block;
+
+    border-bottom: 2px solid lightgrey;
+    background-color: transparent;
+
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color: dimgrey;
+}
+#body-inventory > div:nth-of-type(2) > .inventory-box > .error{
+    grid-column-start: col2;
+    grid-row-start: row2;
+
+    background-color: white;
+    font-family: "Julius Sans One", sans-serif;
+    font-style: normal;
+    -webkit-text-fill-color: red;
+    font-size: 0.8vw;
+    font-weight: bold;
+    align-content: space-evenly;
+    text-align: right;
+}
+#body-inventory > div:nth-of-type(2) > .inventory-box > .item-img-choose{
+    background-color: #EFE861;
+
+    display: grid;
+    grid-template-rows: [start] 1fr [fin];
+    grid-template-columns: [col1-start] 3fr [col2] 1fr [col3] 2fr [col3-fin];
+}
+#body-inventory > div:nth-of-type(2) > .inventory-box > .item-img-choose > div:first-of-type{
+    grid-column-start: col1-start;
+    grid-row-start: start;
+
+    background-color: #e4eded;
+}
+#body-inventory > div:nth-of-type(2) > .inventory-box > .item-img-choose > div:nth-of-type(2){
+    grid-column-start: col2;
+    grid-row-start: start;
+
+    background-color: deepskyblue;
+}
+#body-inventory > div:nth-of-type(2) > .inventory-box > .item-img-choose > div:nth-of-type(3){
+    grid-column-start: col3;
+    grid-row-start: start;
+
+    background-color: #e4eded;
+}
+
+/*----------------*/
 #body-inventory > div:nth-of-type(3){
     grid-column-start: col3;
     background-color: lightskyblue;

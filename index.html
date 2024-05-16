@@ -194,12 +194,34 @@
         </div>
         <div class="customer-box">
             <label class="input-lbl"></label>
-            <input type="text" class="input-txt" placeholder="Main City">
+            <select id="address_main_city" class="address_main_city">
+                <option value="" disabled selected class="placeholder-select" style="color: lightgray">Main City</option>
+                <option value="central">Central</option>
+                <option value="eastern">Eastern</option>
+                <option value="north-central">North Central</option>
+                <option value="northern">Northern</option>
+                <option value="north-western">North Western</option>
+                <option value="sabaragamuwa">Sabaragamuwa</option>
+                <option value="southern">Southern</option>
+                <option value="uva">Uva</option>
+                <option value="western">Western</option>
+            </select>
             <label class="error">there is an error in main city</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl"></label>
-            <input type="text" class="input-txt" placeholder="Main State">
+            <select id="address_main_state" class="address_main_state">
+                <option value="" disabled selected class="placeholder-select" style="color: lightgray">Main State</option>
+                <option value="central">Central</option>
+                <option value="eastern">Eastern</option>
+                <option value="north-central">North Central</option>
+                <option value="northern">Northern</option>
+                <option value="north-western">North Western</option>
+                <option value="sabaragamuwa">Sabaragamuwa</option>
+                <option value="southern">Southern</option>
+                <option value="uva">Uva</option>
+                <option value="western">Western</option>
+            </select>
             <label class="error">there is an error in main state</label>
         </div>
         <div class="customer-box">
@@ -316,7 +338,35 @@
         <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
         <p>INVENTORY</p>
     </div>
-    <div></div>
+    <div>
+        <div class="inventory-box">
+            <label class="input-lbl">Item Code :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in item code</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Item Description :    </label>
+            <textarea cols="30" rows="5" class="input-txt"></textarea>
+            <label class="error">there is an error in item description</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Item Image :    </label>
+            <div class="item-img-choose">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <label class="error">there is an error in item description</label>
+        </div>
+        <div class="inventory-box"></div>
+        <div class="inventory-box"></div>
+        <div class="inventory-box"></div>
+        <div class="inventory-box"></div>
+        <div class="inventory-box"></div>
+        <div class="inventory-box"></div>
+        <div class="inventory-box"></div>
+        <div class="inventory-box"></div>
+    </div>
     <div></div>
     <div></div>
 </div>

@@ -183,6 +183,7 @@
     padding: 0;
     display: block;
 }
+
 #levels{
     grid-column-start: col2;
     grid-row-start: start;
@@ -191,14 +192,31 @@
     outline: 0px;
     border-bottom: 2px solid lightgrey;
     background-color: white;
-    font-size: 1.2vw;
-    /*border-bottom: 3px solid darkblue;*/
+    font-size: 1vw;
     font-family: "Prosto One", sans-serif;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: dimgrey;
-    /*text-transform: uppercase;*/
-    /*-webkit-text-fill-color: red;*/
-    /*font-size: 1vw;*/
+    -webkit-text-fill-color: grey;
+    align-content: space-evenly;
+    text-align: left;
+}
+#address_main_state{
+    border: 0px;
+    outline: 0px;
+    border-bottom: 2px solid lightgrey;
+    background-color: white;
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color:grey;
+    align-content: space-evenly;
+    text-align: left;
+}
+#address_main_city{
+    border: 0px;
+    outline: 0px;
+    border-bottom: 2px solid lightgrey;
+    background-color: white;
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color: grey;
     align-content: space-evenly;
     text-align: left;
 }
