@@ -362,7 +362,7 @@ td, th{
 #customer-tbl{
     border-collapse: collapse;
     /*table-layout: fixed;*/
-    background-color: antiquewhite;
+    background-color: whitesmoke;
 }
 thead th {
     /*width: calc(100%/7);*/

@@ -346,29 +346,146 @@
         </div>
         <div class="inventory-box">
             <label class="input-lbl">Item Description :    </label>
-            <textarea cols="30" rows="5" class="input-txt"></textarea>
+            <textarea cols="30" rows="3" class="input-txt"></textarea>
             <label class="error">there is an error in item description</label>
         </div>
         <div class="inventory-box">
             <label class="input-lbl">Item Image :    </label>
             <div class="item-img-choose">
-                <div></div>
-                <div></div>
+                <div>
+                    <img src="assets/img/sneakers.png" alt="" height="110px" width="auto">
+                </div>
+                <div>
+                    <button class="item-img-choose-save">
+                        <i class="fa-solid fa-pencil fa-xl customer-btn-save" style="color: greenyellow;"></i>
+                    </button>
+                </div>
                 <div></div>
             </div>
-            <label class="error">there is an error in item description</label>
+            <label class="error" >there is an error in item description</label>
         </div>
-        <div class="inventory-box"></div>
-        <div class="inventory-box"></div>
-        <div class="inventory-box"></div>
-        <div class="inventory-box"></div>
-        <div class="inventory-box"></div>
-        <div class="inventory-box"></div>
-        <div class="inventory-box"></div>
-        <div class="inventory-box"></div>
+        <div class="inventory-box">
+            <label class="input-lbl">Item Category :    </label>
+            <div class="choose-category">
+                <div class="icon" id="item-category-img"><img src="" alt="" height="50px" width="auto"></div>
+                <div class="choose-category-sub">
+                    <select id="categories-one" class="category">
+                        <option value="" disabled selected class="placeholder-select">Select item category</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="shoe-polish">Shoe Polish</option>
+                        <option value="shampoo">Shampoo</option>
+                        <option value="socks">Socks</option>
+                    </select>
+                    <select id="categories-two"  class="category">
+                        <option value="" disabled selected class="placeholder-select" style="color: lightgray">Select specific item</option>
+                    </select>
+                </div>
+            </div>
+            <label class="error">there is an error in item category</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Item Size :    </label>
+            <div class="choose-item-size">
+                <select id="item-size-one" class="item-size">
+                    <option value="" disabled selected class="placeholder-select">Category</option>
+                </select>
+                <select id="item-size-two"  class="item-size">
+                    <option value="" disabled selected class="placeholder-select">Size</option>
+                </select>
+            </div>
+            <label class="error">there is an error in item size</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Supplier Code :    </label>
+            <select id="inventory-supplier-code" class="inventory-supplier-code">
+                <option value="" disabled selected class="placeholder-select">Supplier Code</option>
+            </select>
+            <label class="error">there is an error in supplier code</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Unit Price - Sale :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in unit price-sale</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Unit Price - Buy :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in unit price-buy</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Expected Profit :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in expected profit</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Profit Margin :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in profit margin</label>
+        </div>
+        <div class="inventory-box">
+            <label class="input-lbl">Item Status :    </label>
+            <select id="inventory-status" class="inventory-status">
+                <option value="" disabled selected class="placeholder-select">Item Status</option>
+            </select>
+            <label class="error">there is an error in item status</label>
+        </div>
     </div>
-    <div></div>
-    <div></div>
+    <div>
+        <div></div>
+        <div>
+            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: forestgreen;"></i></button>
+            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: forestgreen;"></i></button>
+            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: forestgreen;"></i></button>
+            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: forestgreen;"></i></button>
+            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: greenyellow;"></i></button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <button class="tbl-search-btn"><i class="fa-solid fa-magnifying-glass fa-xl inventory-btn-search" style="color: darkblue;"></i></button>
+            <input type="text">
+        </div>
+        <div>
+            <table id="inventory-tbl">
+                <thead>
+                <tr>
+                    <th>code</th>
+                    <th>image</th>
+                    <th>category</th>
+                    <th>size</th>
+                    <th>supplier code</th>
+                    <th>status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>I001</td>
+                    <td class="inventory-tbl-img">
+                        <div>
+                            <img src="assets/img/shoe-types/basketball-shoes.jpg" alt="" height="100px" width="auto">
+                        </div>
+                    </td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                <tr>
+                    <td>I002</td>
+                    <td class="inventory-tbl-img">
+                        <div>
+                            <img src="assets/img/shoe-types/running-shoes.jpg" alt="" height="100px" width="auto">
+                        </div>
+                    </td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <div id="body-admin">
     <div>

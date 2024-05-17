@@ -163,6 +163,33 @@ $(document).ready(function(){
             case 'kalutara' : postal_code_txt.val("12000");break;
         }
     });
+    $("#categories-one").change(function(){
+        var selectedCategoryMain = $(this).children("option:selected").val();
+        var img = $("#item-category-img > img");
+
+        switch (selectedCategoryMain){
+            case 'shoes' :
+                img.replaceWith("<img src=\"assets/img/shoes.png\" alt=\"\" height=\"50px\" width=\"auto\">");
+                shoes_remove_then_add();
+                shoe_size_one_remove_then_add();
+                break;
+            case 'shoe-polish' : img.replaceWith("<img src=\"assets/img/polish.png\" alt=\"\" height=\"50px\" width=\"auto\">");break;
+            case 'shampoo' : img.replaceWith("<img src=\"assets/img/conditioner.png\" alt=\"\" height=\"50px\" width=\"auto\">");break;
+            case 'socks' : img.replaceWith("<img src=\"assets/img/sock.png\" alt=\"\" height=\"50px\" width=\"auto\">");break;
+        }
+    });
+    $("#item-size-one").change(function(){
+        var selectedSizeCategory = $(this).children("option:selected").val();
+
+        switch (selectedSizeCategory){
+            case 'women' :shoe_size_women_remove_then_add();break;
+            case 'men' : shoe_size_men_remove_then_add();break;
+            case 'big-kid' : shoe_size_big_kid_remove_then_add();break;
+            case 'little-kid' : shoe_size_little_kid_remove_then_add();break;
+            case 'toddler' : shoe_size_toddler_remove_then_add();break;
+            case 'infant' : shoe_size_infant_remove_then_add();break;
+        }
+    });
 });
 var central_remove_then_Add = function () {
     $("select.address_main_city").find("option").remove().end().append(
@@ -252,5 +279,178 @@ var western_remove_then_Add = function () {
         '<option value = "colombo">Colombo</option>' +
         '<option value = "gampaha">Gampaha</option>' +
         '<option value = "kalutara">Kalutara</option>'
+    );
+}
+
+// the specific item select options
+var shoes_remove_then_add = function () {
+    $("#categories-two").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">Select specific item</option>' +
+        // athletic shoes
+        '<option value = "running-shoes">Running Shoes</option>' +
+        '<option value = "basketball-shoes">Basketball Shoes</option>' +
+        '<option value = "soccer-shoes">Soccer Shoes</option>' +
+        '<option value = "hiking-boots">Hiking Boots</option>' +
+        '<option value = "golf-shoes">Golf Shoes</option>' +
+        '<option value = "climbing-shoes">Climbing Shoes</option>' +
+        '<option value = "tennis-shoes">Tennis Shoes</option>' +
+        '<option value = "skate-shoes">Skate Shoes</option>' +
+        '<option value = "sneakers">Sneakers</option>' +
+        // boots
+        '<option value = "ankle-boots">Ankle Boots</option>'+
+        '<option value = "knee-high-boots">Knee High Boots</option>' +
+        '<option value = "combat-boots">Combat Boots</option>' +
+        '<option value = "hiking-boots">Hiking Boots</option>' +
+        '<option value = "work-boots">Work Boots</option>' +
+        '<option value = "cowboy-boots">Cowboy Boots</option>' +
+        '<option value = "wellington-boots">Wellington Boots</option>' +
+        '<option value = "snow-boots">Snow Boots</option>' +
+        // heels
+        '<option value = "stiletto-heels">Stiletto Heels</option>'+
+        '<option value = "wedge-heels">Wedge Heels</option>' +
+        '<option value = "block-heels">Block Heels</option>' +
+        '<option value = "kitten-heels">Kitten Heels</option>' +
+        '<option value = "platform-heels">Platform Heels</option>' +
+        // flats
+        '<option value = "ballet-flats">Ballet Flats</option>' +
+        '<option value = "loafers">Loafers</option>' +
+        '<option value = "flip-flops">Flip Flops</option>' +
+        '<option value = "espadrilles">Espadrilles</option>'+
+        '<option value = "sandals">Sandals</option>' +
+        '<option value = "moccasins">Moccasins</option>' +
+        // herring's men's shoes
+        '<option value = "oxford-shoes">Oxford Shoes</option>' +
+        '<option value = "spectator-shoes">Spectator Shoes</option>' +
+        '<option value = "brogue-shoes">Brogue Shoes</option>' +
+        '<option value = "monk-shoes">Monk Shoes</option>' +
+        '<option value = "derby-shoes">Derby Shoes</option>' +
+        '<option value = "loafers">Loafers</option>'+
+        '<option value = "chelsea-boots">Chelsea Boots</option>' +
+        '<option value = "deck-shoes">Deck Shoes</option>' +
+        '<option value = "slippers">Slippers</option>' +
+        '<option value = "men’s-wedding-shoes">Men’s Wedding Shoes</option>'
+    );
+}
+
+// the sizing categories
+var shoe_size_one_remove_then_add = function () {
+    $("#item-size-one").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">Category</option>' +
+        '<option value = "women">Women</option>' +
+        '<option value = "men">Men</option>' +
+        '<option value = "big-kid">Big Kid</option>' +
+        '<option value = "little-kid">Little Kid</option>' +
+        '<option value = "toddler">Toddler</option>' +
+        '<option value = "infant">Infant</option>'
+    );
+}
+// the sizing : women
+var shoe_size_women_remove_then_add = function () {
+    $("#item-size-two").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">Size</option>' +
+        '<option value = "4">4</option>' +
+        '<option value = "4.5">4.5</option>' +
+        '<option value = "5">5</option>' +
+        '<option value = "5.5">5.5</option>' +
+        '<option value = "6">6</option>' +
+        '<option value = "6.5">6.5</option>' +
+        '<option value = "7">7</option>' +
+        '<option value = "7.5">7.5</option>' +
+        '<option value = "8">8</option>' +
+        '<option value = "8.5">8.5</option>'+
+        '<option value = "9">9</option>' +
+        '<option value = "9.5">9.5</option>' +
+        '<option value = "10">10</option>' +
+        '<option value = "10.5">10.5</option>'+
+        '<option value = "11">11</option>' +
+        '<option value = "11.5">11.5</option>' +
+        '<option value = "12">12</option>'
+    );
+}
+// the sizing : men
+var shoe_size_men_remove_then_add = function () {
+    $("#item-size-two").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">Size</option>' +
+        '<option value = "6">6</option>' +
+        '<option value = "6.5">6.5</option>' +
+        '<option value = "7">7</option>' +
+        '<option value = "7.5">7.5</option>' +
+        '<option value = "8">8</option>' +
+        '<option value = "8.5">8.5</option>' +
+        '<option value = "9">9</option>' +
+        '<option value = "9.5">9.5</option>' +
+        '<option value = "10">10</option>' +
+        '<option value = "10.5">10.5</option>'+
+        '<option value = "11">11</option>' +
+        '<option value = "11.5">11.5</option>' +
+        '<option value = "12">12</option>' +
+        '<option value = "13">13</option>'+
+        '<option value = "14">14</option>' +
+        '<option value = "15">15</option>' +
+        '<option value = "16">16</option>'
+    );
+}
+// the sizing : big kid
+var shoe_size_big_kid_remove_then_add = function () {
+    $("#item-size-two").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">Size</option>' +
+        '<option value = "3.5">3.5</option>' +
+        '<option value = "4">4</option>' +
+        '<option value = "4.5">4.5</option>' +
+        '<option value = "5">5</option>' +
+        '<option value = "5.5">5.5</option>' +
+        '<option value = "6">6</option>' +
+        '<option value = "6.5">6.5</option>' +
+        '<option value = "7">7</option>'
+    );
+}
+// the sizing : little kid
+var shoe_size_little_kid_remove_then_add = function () {
+    $("#item-size-two").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">Size</option>' +
+        '<option value = "10.5">10.5</option>' +
+        '<option value = "11">11</option>' +
+        '<option value = "11.5">11.5</option>' +
+        '<option value = "12">12</option>' +
+        '<option value = "12.5">12.5</option>' +
+        '<option value = "13">13</option>' +
+        '<option value = "13.5">13.5</option>' +
+        '<option value = "1">1</option>'+
+        '<option value = "1.5">1.5</option>' +
+        '<option value = "2">2</option>' +
+        '<option value = "2.5">2.5</option>' +
+        '<option value = "3">3</option>'
+    );
+}
+// the sizing : toddler
+var shoe_size_toddler_remove_then_add = function () {
+    $("#item-size-two").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">size</option>' +
+        '<option value = "3.5">3.5</option>' +
+        '<option value = "4">4</option>' +
+        '<option value = "4.5">4.5</option>' +
+        '<option value = "5">5</option>' +
+        '<option value = "5.5">5.5</option>' +
+        '<option value = "6">6</option>' +
+        '<option value = "6.5">6.5</option>' +
+        '<option value = "7">7</option>'+
+        '<option value = "7.5">7.5</option>' +
+        '<option value = "8">8</option>' +
+        '<option value = "8.5">8.5</option>' +
+        '<option value = "9">9</option>' +
+        '<option value = "9.5">9.5</option>' +
+        '<option value = "10">10</option>'
+    );
+}
+// the sizing : infant
+var shoe_size_infant_remove_then_add = function () {
+    $("#item-size-two").find("option").remove().end().append(
+        '<option value="" disabled selected class="placeholder-select" style="color: lightgray">size</option>' +
+        '<option value = "0">0</option>' +
+        '<option value = "1">1</option>' +
+        '<option value = "1.5">1.5</option>' +
+        '<option value = "2">2</option>' +
+        '<option value = "2.5">2.5</option>' +
+        '<option value = "3">3</option>'
     );
 }
