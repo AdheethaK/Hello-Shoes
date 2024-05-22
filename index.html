@@ -118,9 +118,123 @@
         <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
         <p>SUPPLIER</p>
     </div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div>
+        <div class="supplier-box">
+            <label class="input-lbl">Supplier Code :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in supplier code</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl">Supplier Name :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in supplier name</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl">Category :    </label>
+            <div class="choose-supplier-category">
+                <div class="icon"><i></i></div>
+                <select id="supplier-category" class="supplier-category">
+                    <option value="" disabled selected class="placeholder-select">Select category</option>
+                    <option value="international">International</option>
+                    <option value="local">Local</option>
+                </select>
+            </div>
+            <label class="error">there is an error in category</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl">Address :    </label>
+            <input type="text" class="input-txt" placeholder="Building.No or Name">
+            <label class="error">there is an error in building.no/name</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl"></label>
+            <input type="text" class="input-txt" placeholder="Lane">
+            <label class="error">there is an error in lane</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl"></label>
+            <input type="text" class="input-txt" placeholder="Main City">
+            <label class="error">there is an error in main city</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl"></label>
+            <input type="text" class="input-txt" placeholder="Main State">
+            <label class="error">there is an error in main state</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl"></label>
+            <input type="text" class="input-txt" placeholder="Postal Code">
+            <label class="error">there is an error in postal code</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl">Original Country :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in original country</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl">Contact No 1:    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in contact.no 1</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl">Contact No 2:    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in contact.no 2</label>
+        </div>
+        <div class="supplier-box">
+            <label class="input-lbl">Email :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in email</label>
+        </div>
+    </div>
+    <div>
+        <div></div>
+        <div>
+            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <button class="tbl-search-btn"><i class="fa-solid fa-magnifying-glass fa-xl inventory-btn-search" style="color: darkblue;"></i></button>
+            <input type="text">
+        </div>
+        <div>
+            <table id="supplier-tbl">
+                <thead>
+                <tr>
+                    <th>code</th>
+                    <th>name</th>
+                    <th>category</th>
+                    <th>contact 1</th>
+                    <th>contact 2</th>
+                    <th>email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>I001</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                <tr>
+                    <td>I002</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <div id="body-customer">
     <div>
@@ -196,15 +310,6 @@
             <label class="input-lbl"></label>
             <select id="address_main_city" class="address_main_city">
                 <option value="" disabled selected class="placeholder-select" style="color: lightgray">Main City</option>
-                <option value="central">Central</option>
-                <option value="eastern">Eastern</option>
-                <option value="north-central">North Central</option>
-                <option value="northern">Northern</option>
-                <option value="north-western">North Western</option>
-                <option value="sabaragamuwa">Sabaragamuwa</option>
-                <option value="southern">Southern</option>
-                <option value="uva">Uva</option>
-                <option value="western">Western</option>
             </select>
             <label class="error">there is an error in main city</label>
         </div>
@@ -226,7 +331,7 @@
         </div>
         <div class="customer-box">
             <label class="input-lbl"></label>
-            <input type="text" class="input-txt" placeholder="Postal Code">
+            <input type="text" class="input-txt postal-code-txt" placeholder="Postal Code">
             <label class="error">there is an error in postal code</label>
         </div>
         <div class="customer-box">
@@ -433,11 +538,11 @@
     <div>
         <div></div>
         <div>
-            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: forestgreen;"></i></button>
-            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: forestgreen;"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: forestgreen;"></i></button>
-            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: forestgreen;"></i></button>
-            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: greenyellow;"></i></button>
+            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
         </div>
     </div>
     <div>

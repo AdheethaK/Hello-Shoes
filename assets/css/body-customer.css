@@ -198,7 +198,7 @@
     align-content: space-evenly;
     text-align: left;
 }
-#address_main_state{
+.address_main_state{
     border: 0px;
     outline: 0px;
     border-bottom: 2px solid lightgrey;
@@ -209,7 +209,7 @@
     align-content: space-evenly;
     text-align: left;
 }
-#address_main_city{
+.address_main_city{
     border: 0px;
     outline: 0px;
     border-bottom: 2px solid lightgrey;

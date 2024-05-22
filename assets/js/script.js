@@ -104,7 +104,7 @@ $(document).ready(function(){
     });
     $("select.address_main_city").change(function(){
         let selectedMainCity = $(this).children("option:selected").val();
-        var postal_code_txt = $("#body-customer > div:nth-of-type(2) > .customer-box:nth-of-type(12) > .input-txt");
+        var postal_code_txt = $(".postal-code-txt");
 
         switch (selectedMainCity){
             // central province
@@ -188,6 +188,16 @@ $(document).ready(function(){
             case 'little-kid' : shoe_size_little_kid_remove_then_add();break;
             case 'toddler' : shoe_size_toddler_remove_then_add();break;
             case 'infant' : shoe_size_infant_remove_then_add();break;
+        }
+    });
+
+    // body supplier
+    $("select.supplier-category").change(function(){
+        var selectedSupplierCategory = $(this).children("option:selected").val();
+
+        switch (selectedSupplierCategory){
+            case 'local' : $(".choose-supplier-category .icon > i").replaceWith("<i class=\"fa-solid fa-location-dot fa-2xl\" style=\"color: #63E6BE;\"></i>");break;
+            case 'international' : $(".choose-supplier-category .icon > i").replaceWith("<i class=\"fa-solid fa-earth-americas fa-2xl\" style=\"color: #74C0FC;\"></i>");break;
         }
     });
 });
