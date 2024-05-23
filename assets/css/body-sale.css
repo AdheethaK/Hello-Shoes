@@ -6,15 +6,39 @@
     text-shadow: 5px 5px 0px #3E2E0C, 3px 3px 0px #3E2E0C;
 
 }
+/*------- Sale Form Body : 2nd div---------*/
 #body-sale > div:nth-of-type(2){
-    grid-column-start: col2;
+    grid-template-rows: [row1-start] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr [row6] 1fr [row7] 1fr [row8]
+ 1fr [row9] 1fr [row10] 1fr [row11] 1fr [row12] 1fr [row12-fin];
+
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    /*scrollbar-width: thin;          !* "auto" or "thin" *!*/
+    /*scrollbar-color: lightgrey white;   !* scroll thumb and track *!*/
+}
+/*------- Sale Form Body : 3rd div : div:nth-of-type(2) : button ---------*/
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) > button:hover {
     background-color: lightgrey;
 }
-#body-sale > div:nth-of-type(3){
-    grid-column-start: col3;
-    background-color: lightskyblue;
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) > button:active {
+    background-color: mediumspringgreen;
+    box-shadow: 0 5px #3E2E0C;
+    transform: translateY(4px);
 }
-#body-sale > div:nth-of-type(4){
-    grid-column-start: col4;
-    background-color: lightsalmon;
+/*------- Sale Form Body : 4th div : div:first-of-type : .tbl.search.btn ---------*/
+#body-sale > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn{
+    background-color: mediumspringgreen;
+    box-shadow: #3E2E0C 2.4px 2.4px 3.2px;
+}
+#body-sale > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active {
+    box-shadow: 0 1.5px #3E2E0C;
+}
+/*------- Employee Form Body : 4th div : div:first-of-type : input ---------*/
+#body-sale > div:nth-of-type(4) > div:first-of-type > input{
+    border-bottom: 2px solid #3E2E0C;
+    box-shadow: #3E2E0C 2.4px 2.4px 3.2px;
+}
+/*---------------------table--------------------*/
+#sale-tbl > thead th {
+    background-color: mediumspringgreen;
 }

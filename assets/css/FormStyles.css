@@ -1,0 +1,469 @@
+/*------- Form Body ---------*/
+#body-employee,
+#body-supplier,
+#body-inventory,
+#body-sale,
+#body-customer,
+#body-admin,
+#body-user-service{
+    width: 100%;
+    height: 100%;
+
+    background-color:black;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 0;
+    margin: auto;
+
+    z-index: 0;
+
+    display: grid;
+    grid-template-columns: [col1-first] 5% [col2] 36% [col3] 4% [col4] 55% [col4-fin];
+    grid-template-rows: [start] 100% [fin];
+
+}
+/*------- Form Body : 1st div---------*/
+#body-employee > div:first-of-type,
+#body-supplier > div:first-of-type,
+#body-inventory > div:first-of-type,
+#body-sale > div:first-of-type,
+#body-customer > div:first-of-type,
+#body-admin > div:first-of-type,
+#body-user-service > div:first-of-type{
+    grid-column-start: col1-first;
+    background-color: white;
+    position: relative;
+}
+/*------- Form Body : 1st div : button---------*/
+#body-employee > div:first-of-type > button,
+#body-supplier > div:first-of-type > button,
+#body-inventory > div:first-of-type > button,
+#body-sale > div:first-of-type > button,
+#body-customer > div:first-of-type > button,
+#body-admin > div:first-of-type > button,
+#body-user-service > div:first-of-type > button{
+    position: absolute;
+    top: 1%;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    width: 65%;
+    aspect-ratio: 1/1;
+    background-color: #FDC611;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*------- Form Body : 1st div : p : 1st of type ---------*/
+#body-employee > div:first-of-type >p:first-of-type,
+#body-supplier > div:first-of-type >p:first-of-type,
+#body-inventory > div:first-of-type >p:first-of-type,
+#body-sale > div:first-of-type >p:first-of-type,
+#body-customer > div:first-of-type >p:first-of-type,
+#body-admin > div:first-of-type >p:first-of-type,
+#body-user-service > div:first-of-type >p:first-of-type{
+    rotate: -90deg;
+    /*background-color: pink;*/
+
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    /*bottom: 0;*/
+    /*bottom: 2%;*/
+
+    font-family: "Inter",sans-serif;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+
+}
+/*------- Form Body : 2nd div---------*/
+#body-employee > div:nth-of-type(2),
+#body-supplier > div:nth-of-type(2),
+#body-inventory > div:nth-of-type(2),
+#body-sale > div:nth-of-type(2),
+#body-customer > div:nth-of-type(2){
+    grid-column-start: col2;
+
+    display: grid;
+    grid-template-columns: [start] 100% [fin];
+}
+/*------- Form Body : 2nd div : .[]-box ---------*/
+#body-employee > div:nth-of-type(2) > .employee-box,
+#body-supplier > div:nth-of-type(2) > .supplier-box,
+#body-inventory > div:nth-of-type(2) > .inventory-box,
+#body-sale > div:nth-of-type(2) > .sale-box,
+#body-customer > div:nth-of-type(2) > .customer-box{
+    grid-column-start: start;
+    grid-column-end: fin;
+    background-color: white;
+    /*border: 1px grey solid;*/
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: [col1-start] 1.5fr [col2] 2.5fr [col2-fin];
+    grid-template-rows: [row1-start] 2fr [row2] 1fr [row2-fin];
+}
+/*------- Form Body : 2nd div : .[]-box : .input-lbl ---------*/
+#body-employee > div:nth-of-type(2) > .employee-box > .input-lbl,
+#body-supplier > div:nth-of-type(2) > .supplier-box > .input-lbl,
+#body-inventory > div:nth-of-type(2) > .inventory-box > .input-lbl,
+#body-sale > div:nth-of-type(2) > .sale-box > .input-lbl,
+#body-customer > div:nth-of-type(2) > .customer-box > .input-lbl{
+    grid-column-start: col1-start;
+    grid-row-start: row1-start;
+
+    background-color: white;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-fill-color: dimgrey;
+    font-size: 1.3vw;
+    align-content: space-evenly;
+    text-align: right;
+}
+/*------- Form Body : 2nd div : .[]-box : .input-txt ---------*/
+#body-employee > div:nth-of-type(2) > .employee-box > .input-txt,
+#body-supplier > div:nth-of-type(2) > .supplier-box > .input-txt,
+#body-inventory > div:nth-of-type(2) > .inventory-box > .input-txt,
+#body-sale > div:nth-of-type(2) > .sale-box > .input-txt,
+#body-customer > div:nth-of-type(2) > .customer-box > .input-txt{
+    border:none;
+    outline:none;
+    display:inline-block;
+
+    border-bottom: 2px solid lightgrey;
+    background-color: transparent;
+
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color: dimgrey;
+}
+/*------- Form Body : 2nd div : .[]-box : .input-txt::placeholder ---------*/
+.input-txt::placeholder{
+    -webkit-text-fill-color: lightgrey;
+}
+/*------- Form Body : 2nd div : .[]-box : .date-picker ---------*/
+.date-picker{
+    width: 100%;
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color: gray;
+
+    border: none;
+    border-bottom: 2px solid lightgrey;
+    grid-column-start: col2;
+    grid-row-start: row1;
+    background-color: white;
+}
+/*------- Form Body : 2nd div : .[]-box : .error ---------*/
+#body-employee > div:nth-of-type(2) > .employee-box > .error,
+#body-supplier > div:nth-of-type(2) > .supplier-box > .error,
+#body-inventory > div:nth-of-type(2) > .inventory-box > .error,
+#body-sale > div:nth-of-type(2) > .sale-box > .error,
+#body-customer > div:nth-of-type(2) > .customer-box > .error{
+    grid-column-start: col2;
+    grid-row-start: row2;
+
+    background-color: white;
+    font-family: "Julius Sans One", sans-serif;
+    font-style: normal;
+    -webkit-text-fill-color: red;
+    font-size: 0.8vw;
+    font-weight: bold;
+    align-content: space-evenly;
+    text-align: right;
+}
+/*------- Form Body : 2nd div : .[]-box : div---------*/
+.choose-gender ,
+.choose-status ,
+.choose-designation ,
+.item_code_sale,
+.choose-access-role{
+    display: grid;
+    grid-template-rows: [start] 1fr [end];
+    grid-template-columns: [col1-start] 0.6fr [col2] 5.4fr [col2-fin];
+}
+/*------- Form Body : 2nd div : .[]-box : div : select---------*/
+.gender ,
+.status ,
+.designation ,
+.access-role{
+    grid-column-start: col2;
+    grid-row-start: start;
+
+    border: 0px;
+    outline: 0px;
+    border-bottom: 2px solid lightgrey;
+    background-color: white;
+    font-size: 1vw;
+    /*border-bottom: 3px solid darkblue;*/
+    font-family: "Prosto One", sans-serif;
+    /*text-transform: uppercase;*/
+    -webkit-text-fill-color: dimgrey;
+    /*text-transform: uppercase;*/
+    /*-webkit-text-fill-color: red;*/
+    /*font-size: 1vw;*/
+    align-content: space-evenly;
+    text-align: left;
+}
+.icon{
+    grid-column-start: col1-start;
+    grid-row-start: start;
+    background-color: transparent;
+
+    position: relative;
+}
+.icon > i{
+    position: absolute;
+    left: 5.5px;
+    top: 15px;
+    padding: 0;
+    display: block;
+
+    height: fit-content;
+}
+.address_main_state,
+.address_main_city,
+.payment_method,
+.item_code_sale{
+    border: 0px;
+    outline: 0px;
+    border-bottom: 2px solid lightgrey;
+    background-color: white;
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color:grey;
+    align-content: space-evenly;
+    text-align: left;
+}
+/*------- Form Body : 3rd div ---------*/
+#body-customer > div:nth-of-type(3) ,
+#body-employee > div:nth-of-type(3) ,
+#body-inventory > div:nth-of-type(3) ,
+#body-sale > div:nth-of-type(3) ,
+#body-supplier > div:nth-of-type(3){
+    grid-column-start: col3;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [fin];
+    grid-template-rows: [col1-start] 0.8fr [col2] 1.2fr [col2-fin];
+}
+#body-customer > div:nth-of-type(3) > div:first-of-type ,
+#body-employee > div:nth-of-type(3) > div:first-of-type ,
+#body-inventory > div:nth-of-type(3) > div:first-of-type ,
+#body-sale > div:nth-of-type(3) > div:first-of-type ,
+#body-supplier > div:nth-of-type(3) > div:first-of-type{
+    grid-column-start: start;
+    grid-row-start: col1-start;
+    background-color: transparent;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) ,
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) ,
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) ,
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) ,
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2){
+    grid-column-start: start;
+    grid-row-start: col2;
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [fin];
+    grid-template-rows: [col1-start] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [col5] 1fr [col5-fin];
+    row-gap: 5px;
+    column-gap: 10px;
+    justify-items: center;
+}
+/*------- Form Body : 3rd div : div:nth-of-type(2) : button ---------*/
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button,
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button,
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button,
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) > button,
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button{
+    width: 45px;
+    height:45px;
+
+    background-color: white;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type,
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type,
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type,
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type,
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type{
+    background-color: plum;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2),
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2),
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2),
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2),
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2){
+    background-color: palegreen;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3),
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3),
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3),
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3),
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3){
+    background-color: lightskyblue;
+}
+#body-customer> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4),
+#body-employee> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4),
+#body-inventory> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4),
+#body-sale> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4),
+#body-supplier> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4){
+    background-color: yellow;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5),
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5),
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5),
+#body-sale > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5),
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5){
+    background-color: red;
+}
+/*------- Form Body : 4th div ---------*/
+#body-employee > div:nth-of-type(4),
+#body-supplier > div:nth-of-type(4),
+#body-inventory > div:nth-of-type(4),
+#body-customer > div:nth-of-type(4),
+#body-sale > div:nth-of-type(4){
+    grid-column-start: col4;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [fin];
+    grid-template-rows: [row1-start] 0.5fr [row2] 9.5fr [row2-fin];
+    row-gap: 4px;
+}
+/*------- Form Body : 4th div : div:first-of-type ---------*/
+#body-employee > div:nth-of-type(4) > div:first-of-type,
+#body-supplier > div:nth-of-type(4) > div:first-of-type,
+#body-inventory > div:nth-of-type(4) > div:first-of-type,
+#body-customer > div:nth-of-type(4) > div:first-of-type,
+#body-sale > div:nth-of-type(4) > div:first-of-type{
+    grid-column-start: start;
+    grid-row-start: row1-start;
+
+    background-color: white;
+    display: grid;
+    grid-template-columns: [col1-start] 10.3fr [col2] 0.7fr [col2-fin];
+    grid-template-rows: [start] 1fr [fin];
+
+    justify-items:center ;
+}
+/*------- Form Body : 4th div : div:first-of-type : .tbl.search.btn ---------*/
+#body-employee > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn,
+#body-supplier > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn,
+#body-inventory > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn,
+#body-customer > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn,
+#body-sale > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn{
+    grid-column-start: col2;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    height: 90%;
+    width: 95%;
+    position: relative;
+    top: 3px;
+    -webkit-text-fill-color: white;
+}
+#body-employee > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active,
+#body-supplier > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active,
+#body-inventory > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active,
+#body-customer > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active,
+#body-sale > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active{
+    background-color: lightgrey;
+    transform: translateY(2px);
+}
+/*------- Form Body : 4th div : div:first-of-type : input ---------*/
+#body-employee > div:nth-of-type(4) > div:first-of-type > input,
+#body-supplier > div:nth-of-type(4) > div:first-of-type > input,
+#body-inventory > div:nth-of-type(4) > div:first-of-type > input,
+#body-customer > div:nth-of-type(4) > div:first-of-type > input,
+#body-sale > div:nth-of-type(4) > div:first-of-type > input{
+    grid-column-start: col1-start;
+    grid-row-start: start;
+
+    width: 100%;
+    height: 80%;
+    position: relative;
+    top: 3px;
+
+    border:none;
+    outline:none;
+    display:inline-block;
+
+    background-color: whitesmoke;
+
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color: #3E2E0C;
+    text-align: left;
+}
+/*------- Form Body : 4th div : div:nth-of-type(2) ---------*/
+#body-employee > div:nth-of-type(4) > div:nth-of-type(2),
+#body-supplier > div:nth-of-type(4) > div:nth-of-type(2),
+#body-inventory > div:nth-of-type(4) > div:nth-of-type(2),
+#body-customer > div:nth-of-type(4) > div:nth-of-type(2),
+#body-sale > div:nth-of-type(4) > div:nth-of-type(2){
+    grid-column-start: start;
+    grid-row-start: row2;
+
+    background-color:white;
+    overflow: scroll;
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: lightgrey white;
+}
+/*------- Form Body : 4th div : div:nth-of-type(2) : table ---------*/
+td, th{
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 10px;
+}
+tbody{
+    font-size: 1vw;
+    font-family: "Prosto One", sans-serif;
+    -webkit-text-fill-color: dimgrey;
+    text-align: left;
+}
+#employee-tbl,
+#supplier-tbl,
+#inventory-tbl,
+#customer-tbl,
+#sale-tbl{
+    border-collapse: collapse;
+    background-color: whitesmoke;
+    /*table-layout: fixed;*/
+    width: 100%;
+}
+#employee-tbl > tbody tr:hover,
+#supplier-tbl > tbody tr:hover,
+#inventory-tbl > tbody tr:hover,
+#customer-tbl > tbody tr:hover,
+#sale-tbl > tbody tr:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+#employee-tbl > thead th ,
+#supplier-tbl > thead th ,
+#inventory-tbl > thead th ,
+#customer-tbl > thead th ,
+#sale-tbl > thead th {
+    font-weight: bold;
+    -webkit-text-fill-color: #3E2E0C;
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 1.1vw;
+}
