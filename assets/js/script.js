@@ -65,17 +65,18 @@ $("#body-user-service > div > .btn-back-to-menu").on('click',()=>{
     $("#body-user-service").css("left","-100%").css("z-index",0);
     $("#body-menu").css("z-index",1);
 })
-
 $(document).ready(function(){
-    $(".customer-box > .choose-gender > select.level").change(function(){
+    // choose level for customer
+    $(".customer-box > .choose-level > select.level").change(function(){
         var selectedLevel = $(this).children("option:selected").val();
+        var iconLevel = $(".choose-level .icon > i");
 
         switch (selectedLevel){
-            case 'red' : $(".choose-level .icon > i").css("-webkit-text-fill-color","red");break;
-            case 'bronze' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#FDB835");break;
-            case 'silver' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#A6A8AB");break;
-            case 'gold' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#8F784D");break;
-            case 'platinum' : $(".choose-level .icon > i").css("-webkit-text-fill-color","#18242C");break;
+            case 'red' : iconLevel.css("-webkit-text-fill-color","#F31A16");break;
+            case 'bronze' : iconLevel.css("-webkit-text-fill-color","#FDB835");break;
+            case 'silver' : iconLevel.css("-webkit-text-fill-color","#A6A8AB");break;
+            case 'gold' : iconLevel.css("-webkit-text-fill-color","#8F784D");break;
+            case 'platinum' : iconLevel.css("-webkit-text-fill-color","#18242C");break;
         }
     });
 

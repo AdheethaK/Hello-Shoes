@@ -1,59 +1,6 @@
-#body-sale{
-    width: 100%;
-    height: 100%;
-
-    background-color:crimson;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -100%;
-    right: 0;
-    margin: auto;
-
-    z-index: 0;
-
-
-    display: grid;
-    grid-template-columns: [col1-first] 5% [col2] 36% [col3] 4% [col4] 55% [col4-fin];
-    grid-template-rows: [start] 100% [fin];
-
-}
-#body-sale > div:first-of-type{
-    grid-column-start: col1-first;
-    background-color: white;
-    position: relative;
-}
-#body-sale > div:first-of-type > button{
-    position: absolute;
-    top: 1%;
-    left: 0;
-    right: 0;
-    margin: auto;
-
-    width: 65%;
-    aspect-ratio: 1/1;
-    background-color: #FDC611;
-
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
 #body-sale > div:first-of-type >p:first-of-type{
-    rotate: -90deg;
-    /*background-color: pink;*/
-
-    position: absolute;
     top: 45%;
-    left: 0;
-    right: 0;
-    /*bottom: 0;*/
-    /*bottom: 2%;*/
 
-    font-family: "Inter",sans-serif;
-    font-weight: 900;
-    -webkit-font-smoothing: antialiased;
-    text-transform: uppercase;
     -webkit-text-fill-color: mediumspringgreen;
     font-size: 3vw;
     text-shadow: 5px 5px 0px #3E2E0C, 3px 3px 0px #3E2E0C;
