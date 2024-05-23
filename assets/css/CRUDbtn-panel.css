@@ -1,0 +1,78 @@
+#body-customer > div:nth-of-type(3) ,
+#body-employee > div:nth-of-type(3) ,
+#body-inventory > div:nth-of-type(3) ,
+#body-supplier > div:nth-of-type(3){
+    grid-column-start: col3;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [fin];
+    grid-template-rows: [col1-start] 0.8fr [col2] 1.2fr [col2-fin];
+}
+#body-customer > div:nth-of-type(3) > div:first-of-type ,
+#body-employee > div:nth-of-type(3) > div:first-of-type ,
+#body-inventory > div:nth-of-type(3) > div:first-of-type ,
+#body-supplier > div:nth-of-type(3) > div:first-of-type{
+    grid-column-start: start;
+    grid-row-start: col1-start;
+    background-color: transparent;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) ,
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) ,
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) ,
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2){
+    grid-column-start: start;
+    grid-row-start: col2;
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [fin];
+    grid-template-rows: [col1-start] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [col5] 1fr [col5-fin];
+    row-gap: 5px;
+    column-gap: 10px;
+    justify-items: center;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button,
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button,
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button,
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button{
+    width: 45px;
+    height:45px;
+
+    background-color: white;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type,
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type,
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type,
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:first-of-type{
+    background-color: plum;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2),
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2),
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2),
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(2){
+    background-color: palegreen;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3),
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3),
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3),
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(3){
+    background-color: lightskyblue;
+}
+#body-customer> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4),
+#body-employee> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4),
+#body-inventory> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4),
+#body-supplier> div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(4){
+    background-color: yellow;
+}
+#body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5),
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5),
+#body-inventory > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5),
+#body-supplier > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(5){
+    background-color: red;
+}

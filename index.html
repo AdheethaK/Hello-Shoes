@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Hello Shoes</title>
 
+    <link rel="stylesheet" href="assets/css/CRUDbtn-panel.css">
     <link rel="stylesheet" href="assets/css/body-login.css">
     <link rel="stylesheet" href="assets/css/body-menu.css">
     <link rel="stylesheet" href="assets/css/body-sale.css">
@@ -434,8 +435,179 @@
         <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
         <p>EMPLOYEE</p>
     </div>
-    <div></div>
-    <div></div>
+    <div>
+        <div class="employee-box">
+            <label class="input-lbl">Employee Code :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in employee code</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Employee Name :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in employee name</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Employee Profile Image :    </label>
+            <div class="employee-img-choose">
+                <div>
+                    <img src="assets/img/avatar.png" alt="" height="110px" width="auto">
+                </div>
+                <div>
+                    <button class="item-img-choose-save">
+                        <i class="fa-solid fa-pencil fa-xl customer-btn-save" style="color: darkblue;"></i>
+                    </button>
+                </div>
+                <div></div>
+            </div>
+            <label class="error" >there is an error in employee profile image</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Gender :</label>
+            <div class="choose-gender">
+                <div class="icon"><i></i></div>
+                <select class="gender">
+                    <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select customer gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="rather-not-say">Rather not say</option>
+                </select>
+            </div>
+            <label class="error">there is an error in gender</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Status :</label>
+            <div class="choose-status">
+                <div class="icon"><i></i></div>
+                <select class="status">
+                    <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select employee status</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="seperated">Seperated</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                </select>
+            </div>
+            <label class="error">there is an error in status</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Designation :</label>
+            <div class="choose-designation">
+                <div class="icon"><i></i></div>
+                <select class="designation">
+                    <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select employee status</option>
+                    <option value="store-manager">Store Manager</option>
+                    <option value="sales">Sales</option>
+                    <option value="customer-service-manager">Customer Service Manager</option>
+                    <option value="footwear-salesperson">Footware Salesperson</option>
+                    <option value="buyer">Buyer</option>
+                    <option value="cashier">Cashier</option>
+                    <option value="designer">Designer</option>
+                    <option value="manager">Manager</option>
+                    <option value="visual-merchandiser">Visual Merchandiser</option>
+                    <option value="account-manager">Account Manager</option>
+                    <option value="fashion-merchandiser">Fashion Merchandiser</option>
+                    <option value="marketing-manager">Marketing Manager</option>
+                </select>
+            </div>
+            <label class="error">there is an error in status</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Access Role :</label>
+            <div class="choose-access-role">
+                <div class="icon"><i></i></div>
+                <select class="access-role">
+                    <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select employee access role</option>
+                    <option value="admin">ADMIN</option>
+                    <option value="user">USER</option>
+                </select>
+            </div>
+            <label class="error">there is an error in access role</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Date Of Birth :    </label>
+            <input type="date" name="joined_date" id="dob_supplier" class="date-picker">
+            <label class="error">there is an error in date of birth</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">joined date :    </label>
+            <input type="date" name="joined_date" id="joined_date_supplier" class="date-picker">
+            <label class="error">there is an error in joined date</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Attached Branch :    </label>
+            <input type="date" name="joined_date" id="attached_branch_supplier" class="date-picker">
+            <label class="error">there is an error in attached branch</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Address :    </label>
+            <input type="text" class="input-txt" placeholder="Building.No or Name">
+            <label class="error">there is an error in building.no/name</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl"></label>
+            <input type="text" class="input-txt" placeholder="Lane">
+            <label class="error">there is an error in lane</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl"></label>
+            <select class="address_main_city">
+                <option value="" disabled selected class="placeholder-select" style="color: lightgray">Main City</option>
+            </select>
+            <label class="error">there is an error in main city</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl"></label>
+            <select class="address_main_state">
+                <option value="" disabled selected class="placeholder-select" style="color: lightgray">Main State</option>
+                <option value="central">Central</option>
+                <option value="eastern">Eastern</option>
+                <option value="north-central">North Central</option>
+                <option value="northern">Northern</option>
+                <option value="north-western">North Western</option>
+                <option value="sabaragamuwa">Sabaragamuwa</option>
+                <option value="southern">Southern</option>
+                <option value="uva">Uva</option>
+                <option value="western">Western</option>
+            </select>
+            <label class="error">there is an error in main state</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl"></label>
+            <input type="text" class="input-txt postal-code-txt" placeholder="Postal Code">
+            <label class="error">there is an error in postal code</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Contact No :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in contact.no</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Email :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in email</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Inform in case of emergency :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in inform in case of emergency</label>
+        </div>
+        <div class="employee-box">
+            <label class="input-lbl">Emergency Contact :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in emergency contact</label>
+        </div>
+    </div>
+    <div>
+        <div></div>
+        <div>
+            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
+            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
+        </div>
+    </div>
     <div></div>
 </div>
 <div id="body-inventory">
