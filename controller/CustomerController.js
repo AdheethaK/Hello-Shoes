@@ -4,7 +4,7 @@ import {CustomerModel} from "../model/CustomerModel.js";
 // -------- 02. Save Customer --------------
 $("#customer-btn-save").on('click',() =>{
 
-    let customer = get_customer_obj_from_input();
+    let customer = get_object_customer();
     console.log(customer);
 
     // JavaEE
@@ -44,7 +44,37 @@ $("#customer-btn-update").on('click',()=>{
 })
 // -------- 04. Search Customer --------------
 $("#customer-btn-search").on('click',()=>{
-    alert("customer search : )")
+
+    let customer_code = $('#input-customer-code').val();
+    // send data to endpoint via ajax
+    // AJAX - JQuery
+    $.ajax({
+        traditional : true,
+        url : "http://localhost:8080/HelloShoes/api/v1/customer",
+        type : "GET",
+        data : {"customerCode" : customer_code},
+        headers : {"Content-Type":"application/json"} ,
+        success:
+            function (customer){
+                console.log(customer);
+                fill_all_fields_customer(customer)
+                Swal.fire(
+                    'Success!',
+                    'Customer has been saved successfully!',
+                    'success'
+                );
+                // let customer = $.parseJSON(customerJSON)
+                // console.log(customer.customer_name)
+                // fill_all_fields_customer(customer)
+            },
+        error : (err) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Input',
+                text: err
+            })
+        }
+    });
 })
 // -------- 05. Delete Customer --------------
 $("#customer-btn-delete").on('click',()=>{
@@ -76,8 +106,8 @@ const clear_input = () => {
     $(".choose-gender > .icon > i").replaceWith("<i></i>");
     $(".choose-level > .icon > i").css("-webkit-text-fill-color","transparent");
 }
-// -------- 07. Get Customer Model Object from all inputs --------------
-const get_customer_obj_from_input = ()=>{
+// -------- 07. Get object : Customer --------------
+const get_object_customer = ()=>{
     let customer_code = $("#input-customer-code").val();
     let customer_name = $("#input-customer-name").val();
     let customer_gender = $("#input-customer-gender").val();
@@ -114,4 +144,28 @@ const get_customer_obj_from_input = ()=>{
     );
 
     return customer;
+}
+// -------- 08. Fill all fields : Customer --------------
+const fill_all_fields_customer = (customer)=>{
+    $("#input-customer-code").val(customer.customer_code.substring(0, 4));
+    $("#input-customer-name").val(customer.customer_name);
+    $("#input-customer-gender").val(customer.customer_gender).change(change_select_to_dark_grey($("#input-customer-gender")));
+    choose_gender(customer.customer_gender,$(".customer-box > .choose-gender .icon > i"));
+
+    $("#input-customer-joined-date").val(customer.customer_joined_date).change(change_select_to_dark_grey($("#input-customer-joined-date")));
+    $("#input-customer-level").val(customer.customer_level).change(change_select_to_dark_grey($("#input-customer-level")));
+    choose_level(customer.customer_level,$(".choose-level .icon > i"))
+
+    $("#input-customer-total-points").val(customer.customer_total_points);
+    $("#input-customer-dob").val(customer.customer_dob).change(change_select_to_dark_grey($("#input-customer-dob")));
+    $("#input-customer-address-building-no-or-name").val(customer.customer_address_building_no_or_name);
+    $("#input-customer-address-lane").val(customer.customer_address_lane);
+    $("#input-customer-address-main-state").val(customer.customer_address_main_state).change(change_select_to_dark_grey($("#input-customer-address-main-state")));
+    change_main_city(customer.customer_address_main_state);
+    $("#input-customer-address-main-city").val(customer.customer_address_main_city).change(change_select_to_dark_grey($("#input-customer-address-main-city")));
+    $("#input-customer-address-postal-code").val(customer.customer_address_postal_code);
+    $("#input-customer-contact-no").val(customer.customer_contact_no);
+    $("#input-customer-email").val(customer.customer_email);
+    $("#input-customer-recent-purchase").val(customer.customer_recent_purchase);
+    change_all_to_dark_grey_customer();
 }

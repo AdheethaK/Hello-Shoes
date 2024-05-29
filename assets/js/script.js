@@ -69,209 +69,64 @@ $("#body-user-service > div > .btn-back-to-menu").on('click',()=>{
 const change_select_to_dark_grey = (changedInputSelect)=>{
     $(changedInputSelect).css("-webkit-text-fill-color","grey");
 }
-$(document).ready(function(){
-    // change select on change : Customer
+const change_all_to_dark_grey_customer = ()=>{
     $("#input-customer-gender").change(function () { change_select_to_dark_grey($("#input-customer-gender")) });
     $("#input-customer-joined-date").change(function () { change_select_to_dark_grey($("#input-customer-joined-date")) });
     $("#input-customer-level").change(function () { change_select_to_dark_grey($("#input-customer-level")) });
     $("#input-customer-dob").change(function () { change_select_to_dark_grey($("#input-customer-dob")) });
     $("#input-customer-address-main-city").change(function () { change_select_to_dark_grey($("#input-customer-address-main-city")) });
     $("#input-customer-address-main-state").change(function () { change_select_to_dark_grey($("#input-customer-address-main-state")) });
+}
+$(document).ready(function(){
+    // change select on change : Customer
+    change_all_to_dark_grey_customer();
 
     // choose level for customer
     $(".customer-box > .choose-level > select.level").change(function(){
         var selectedLevel = $(this).children("option:selected").val();
         var iconLevel = $(".choose-level .icon > i");
-
-        switch (selectedLevel){
-            case 'red' : iconLevel.css("-webkit-text-fill-color","#F31A16");break;
-            case 'bronze' : iconLevel.css("-webkit-text-fill-color","#FDB835");break;
-            case 'silver' : iconLevel.css("-webkit-text-fill-color","#A6A8AB");break;
-            case 'gold' : iconLevel.css("-webkit-text-fill-color","#8F784D");break;
-            case 'platinum' : iconLevel.css("-webkit-text-fill-color","#18242C");break;
-        }
+        choose_level(selectedLevel,iconLevel)
     });
 
     // choose gender for customer
     $(".customer-box > .choose-gender  > select.gender").change(function(){
         var selectedGender = $(this).children("option:selected").val();
-        var genderIconCustomer = $(".customer-box > .choose-gender .icon > i");
-
-        switch (selectedGender){
-            case 'male' : genderIconCustomer.replaceWith("<i class=\"fa-solid fa-person fa-2xl\" style=\"color: #74C0FC;\"></i>");break;
-            case 'female' : genderIconCustomer.replaceWith("<i class=\"fa-solid fa-person-dress fa-2xl\" style=\"color: #fe1667;\"></i>");break;
-            case 'other' : genderIconCustomer.replaceWith("<i class=\"fa-solid fa-person-half-dress fa-2xl\" style=\"color: #FF9800;\"></i>");break;
-            case 'rather-not-say' : genderIconCustomer.replaceWith("<i class=\"fa-solid fa-neuter fa-2xl\" style=\"color: #4cfe0b;\"></i>");break;
-        }
+        let genderIcon = $(".customer-box > .choose-gender .icon > i");
+        choose_gender(selectedGender,genderIcon);
     });
     // choose gender for employee
     $(".employee-box > .choose-gender  > select.gender").change(function(){
         var selectedGender = $(this).children("option:selected").val();
-        var genderIconEmployee = $(".employee-box > .choose-gender .icon > i");
-
-        switch (selectedGender){
-            case 'male' : genderIconEmployee.replaceWith("<i class=\"fa-solid fa-person fa-2xl\" style=\"color: #74C0FC;\"></i>");break;
-            case 'female' : genderIconEmployee.replaceWith("<i class=\"fa-solid fa-person-dress fa-2xl\" style=\"color: #fe1667;\"></i>");break;
-            case 'other' : genderIconEmployee.replaceWith("<i class=\"fa-solid fa-person-half-dress fa-2xl\" style=\"color: #FF9800;\"></i>");break;
-            case 'rather-not-say' : genderIconEmployee.replaceWith("<i class=\"fa-solid fa-neuter fa-2xl\" style=\"color: #4cfe0b;\"></i>");break;
-        }
+        let genderIcon = $(".employee-box > .choose-gender .icon > i");
+        choose_gender(selectedGender,genderIcon);
     });
+
     // choose main state customer
     $(".customer-box > select.address_main_state").change(function(){
         var selectedState = $(this).children("option:selected").val();
-
-        switch (selectedState){
-            case 'central' :central_remove_then_Add();break;
-            case 'eastern' : eastern_remove_then_Add();break;
-            case 'north-central' : north_central_remove_then_Add();break;
-            case 'northern' : northern_remove_then_Add();break;
-            case 'north-western' : north_western_remove_then_Add();break;
-            case 'sabaragamuwa' : sabaragamuwa_remove_then_Add();break;
-            case 'southern' : southern_remove_then_Add();break;
-            case 'uva' : uva_remove_then_Add();break;
-            case 'western' : western_remove_then_Add();break;
-        }
+        change_main_city(selectedState);
+        clear_postal_code_field();
     });
     // choose main state employee
     $(".employee-box > select.address_main_state").change(function(){
         var selectedState = $(this).children("option:selected").val();
-
-        switch (selectedState){
-            case 'central' :central_remove_then_Add();break;
-            case 'eastern' : eastern_remove_then_Add();break;
-            case 'north-central' : north_central_remove_then_Add();break;
-            case 'northern' : northern_remove_then_Add();break;
-            case 'north-western' : north_western_remove_then_Add();break;
-            case 'sabaragamuwa' : sabaragamuwa_remove_then_Add();break;
-            case 'southern' : southern_remove_then_Add();break;
-            case 'uva' : uva_remove_then_Add();break;
-            case 'western' : western_remove_then_Add();break;
-        }
+        change_main_city(selectedState);
+        clear_postal_code_field();
     });
 
     // choose customer main city
     $(".customer-box > select.address_main_city").change(function(){
         let selectedMainCity = $(this).children("option:selected").val();
         var postal_code_txt = $(".customer-box > .postal-code-txt");
-
-        switch (selectedMainCity){
-            // central province
-            case 'kandy' : postal_code_txt.val("2000");break;
-            case 'matale' : postal_code_txt.val("21000");break;
-            case 'gampola' : postal_code_txt.val("20500");break;
-            case 'nuwara-eliya' : postal_code_txt.val("22200");break;
-            case 'dambulla' : postal_code_txt.val("21100");break;
-            case 'hatton' : postal_code_txt.val("22000");break;
-            case 'nawalapitiya' : postal_code_txt.val("20650");break;
-            case 'kadugannawa' : postal_code_txt.val("20300");break;
-            case 'wattegama' : postal_code_txt.val("20810");break;
-            case 'talawakele' : postal_code_txt.val("22100");break;
-            // eastern province
-            case 'ampara' : postal_code_txt.val("32000");break;
-            case 'batticaloa' : postal_code_txt.val("30000");break;
-            case 'trincomalee' : postal_code_txt.val("31000");break;
-            // north central province
-            case 'anuradhapura' : postal_code_txt.val("50000");break;
-            case 'polonnaruwa' : postal_code_txt.val("51000");break;
-            // northern province
-            case 'vavuniya' : postal_code_txt.val("43000");break;
-            case 'jaffna' : postal_code_txt.val("40000");break;
-            case 'chavakacheri' : postal_code_txt.val("40500");break;
-            case 'mannar' : postal_code_txt.val("41000");break;
-            case 'point-pedro' : postal_code_txt.val("40600");break;
-            case 'valvettithurai' : postal_code_txt.val("40540");break;
-            // north western
-            case 'kurunegala' : postal_code_txt.val("60000");break;
-            case 'puttalam' : postal_code_txt.val("61300");break;
-            case 'kuliyapitiya' : postal_code_txt.val("60200");break;
-            case 'chilaw' : postal_code_txt.val("61000");break;
-            case 'narammula' : postal_code_txt.val("60100");break;
-            // sabaragamuwa
-            case 'kegalle' : postal_code_txt.val("71000");break;
-            case 'ratnapura' : postal_code_txt.val("70000");break;
-            // southern
-            case 'galle' : postal_code_txt.val("80000");break;
-            case 'matara' : postal_code_txt.val("81000");break;
-            case 'hikkaduwa' : postal_code_txt.val("80240");break;
-            case 'hambantota' : postal_code_txt.val("82000");break;
-            case 'weligama' : postal_code_txt.val("81700");break;
-            case 'ambalangoda' : postal_code_txt.val("80300");break;
-            case 'tangalle' : postal_code_txt.val("82200");break;
-            // uva
-            case 'badulla' : postal_code_txt.val("90000");break;
-            case 'bandarawela' : postal_code_txt.val("90100");break;
-            case 'haputale' : postal_code_txt.val("90160");break;
-            case 'monaragala' : postal_code_txt.val("91050");break;
-            case 'welimada' : postal_code_txt.val("90200");break;
-            case 'wellawaya' : postal_code_txt.val("91200");break;
-            case 'ella' : postal_code_txt.val("90020");break;
-            // western
-            case 'colombo' : postal_code_txt.val("00100");break;
-            case 'gampaha' : postal_code_txt.val("11870");break;
-            case 'kalutara' : postal_code_txt.val("12000");break;
-        }
+        clear_postal_code_field();
+        insert_postal_code(selectedMainCity,postal_code_txt)
     });
     // choose employee main city
     $(".employee-box > select.address_main_city").change(function(){
         let selectedMainCity = $(this).children("option:selected").val();
         var postal_code_txt = $(".employee-box > .postal-code-txt");
-
-        switch (selectedMainCity){
-            // central province
-            case 'kandy' : postal_code_txt.val("2000");break;
-            case 'matale' : postal_code_txt.val("21000");break;
-            case 'gampola' : postal_code_txt.val("20500");break;
-            case 'nuwara-eliya' : postal_code_txt.val("22200");break;
-            case 'dambulla' : postal_code_txt.val("21100");break;
-            case 'hatton' : postal_code_txt.val("22000");break;
-            case 'nawalapitiya' : postal_code_txt.val("20650");break;
-            case 'kadugannawa' : postal_code_txt.val("20300");break;
-            case 'wattegama' : postal_code_txt.val("20810");break;
-            case 'talawakele' : postal_code_txt.val("22100");break;
-            // eastern province
-            case 'ampara' : postal_code_txt.val("32000");break;
-            case 'batticaloa' : postal_code_txt.val("30000");break;
-            case 'trincomalee' : postal_code_txt.val("31000");break;
-            // north central province
-            case 'anuradhapura' : postal_code_txt.val("50000");break;
-            case 'polonnaruwa' : postal_code_txt.val("51000");break;
-            // northern province
-            case 'vavuniya' : postal_code_txt.val("43000");break;
-            case 'jaffna' : postal_code_txt.val("40000");break;
-            case 'chavakacheri' : postal_code_txt.val("40500");break;
-            case 'mannar' : postal_code_txt.val("41000");break;
-            case 'point-pedro' : postal_code_txt.val("40600");break;
-            case 'valvettithurai' : postal_code_txt.val("40540");break;
-            // north western
-            case 'kurunegala' : postal_code_txt.val("60000");break;
-            case 'puttalam' : postal_code_txt.val("61300");break;
-            case 'kuliyapitiya' : postal_code_txt.val("60200");break;
-            case 'chilaw' : postal_code_txt.val("61000");break;
-            case 'narammula' : postal_code_txt.val("60100");break;
-            // sabaragamuwa
-            case 'kegalle' : postal_code_txt.val("71000");break;
-            case 'ratnapura' : postal_code_txt.val("70000");break;
-            // southern
-            case 'galle' : postal_code_txt.val("80000");break;
-            case 'matara' : postal_code_txt.val("81000");break;
-            case 'hikkaduwa' : postal_code_txt.val("80240");break;
-            case 'hambantota' : postal_code_txt.val("82000");break;
-            case 'weligama' : postal_code_txt.val("81700");break;
-            case 'ambalangoda' : postal_code_txt.val("80300");break;
-            case 'tangalle' : postal_code_txt.val("82200");break;
-            // uva
-            case 'badulla' : postal_code_txt.val("90000");break;
-            case 'bandarawela' : postal_code_txt.val("90100");break;
-            case 'haputale' : postal_code_txt.val("90160");break;
-            case 'monaragala' : postal_code_txt.val("91050");break;
-            case 'welimada' : postal_code_txt.val("90200");break;
-            case 'wellawaya' : postal_code_txt.val("91200");break;
-            case 'ella' : postal_code_txt.val("90020");break;
-            // western
-            case 'colombo' : postal_code_txt.val("00100");break;
-            case 'gampaha' : postal_code_txt.val("11870");break;
-            case 'kalutara' : postal_code_txt.val("12000");break;
-        }
+        clear_postal_code_field();
+        insert_postal_code(selectedMainCity,postal_code_txt)
     });
 
     $("#categories-one").change(function(){
@@ -312,6 +167,101 @@ $(document).ready(function(){
         }
     });
 });
+
+const change_main_city = (selectedState)=>{
+    switch (selectedState){
+        case 'central' :central_remove_then_Add();break;
+        case 'eastern' : eastern_remove_then_Add();break;
+        case 'north-central' : north_central_remove_then_Add();break;
+        case 'northern' : northern_remove_then_Add();break;
+        case 'north-western' : north_western_remove_then_Add();break;
+        case 'sabaragamuwa' : sabaragamuwa_remove_then_Add();break;
+        case 'southern' : southern_remove_then_Add();break;
+        case 'uva' : uva_remove_then_Add();break;
+        case 'western' : western_remove_then_Add();break;
+    }
+}
+
+const clear_postal_code_field = ()=>{
+    $("#input-customer-address-postal-code").val('');
+}
+const insert_postal_code = (selectedMainCity,postal_code_txt)=>{
+    switch (selectedMainCity){
+        // central province
+        case 'kandy' : postal_code_txt.val("2000");break;
+        case 'matale' : postal_code_txt.val("21000");break;
+        case 'gampola' : postal_code_txt.val("20500");break;
+        case 'nuwara-eliya' : postal_code_txt.val("22200");break;
+        case 'dambulla' : postal_code_txt.val("21100");break;
+        case 'hatton' : postal_code_txt.val("22000");break;
+        case 'nawalapitiya' : postal_code_txt.val("20650");break;
+        case 'kadugannawa' : postal_code_txt.val("20300");break;
+        case 'wattegama' : postal_code_txt.val("20810");break;
+        case 'talawakele' : postal_code_txt.val("22100");break;
+        // eastern province
+        case 'ampara' : postal_code_txt.val("32000");break;
+        case 'batticaloa' : postal_code_txt.val("30000");break;
+        case 'trincomalee' : postal_code_txt.val("31000");break;
+        // north central province
+        case 'anuradhapura' : postal_code_txt.val("50000");break;
+        case 'polonnaruwa' : postal_code_txt.val("51000");break;
+        // northern province
+        case 'vavuniya' : postal_code_txt.val("43000");break;
+        case 'jaffna' : postal_code_txt.val("40000");break;
+        case 'chavakacheri' : postal_code_txt.val("40500");break;
+        case 'mannar' : postal_code_txt.val("41000");break;
+        case 'point-pedro' : postal_code_txt.val("40600");break;
+        case 'valvettithurai' : postal_code_txt.val("40540");break;
+        // north western
+        case 'kurunegala' : postal_code_txt.val("60000");break;
+        case 'puttalam' : postal_code_txt.val("61300");break;
+        case 'kuliyapitiya' : postal_code_txt.val("60200");break;
+        case 'chilaw' : postal_code_txt.val("61000");break;
+        case 'narammula' : postal_code_txt.val("60100");break;
+        // sabaragamuwa
+        case 'kegalle' : postal_code_txt.val("71000");break;
+        case 'ratnapura' : postal_code_txt.val("70000");break;
+        // southern
+        case 'galle' : postal_code_txt.val("80000");break;
+        case 'matara' : postal_code_txt.val("81000");break;
+        case 'hikkaduwa' : postal_code_txt.val("80240");break;
+        case 'hambantota' : postal_code_txt.val("82000");break;
+        case 'weligama' : postal_code_txt.val("81700");break;
+        case 'ambalangoda' : postal_code_txt.val("80300");break;
+        case 'tangalle' : postal_code_txt.val("82200");break;
+        // uva
+        case 'badulla' : postal_code_txt.val("90000");break;
+        case 'bandarawela' : postal_code_txt.val("90100");break;
+        case 'haputale' : postal_code_txt.val("90160");break;
+        case 'monaragala' : postal_code_txt.val("91050");break;
+        case 'welimada' : postal_code_txt.val("90200");break;
+        case 'wellawaya' : postal_code_txt.val("91200");break;
+        case 'ella' : postal_code_txt.val("90020");break;
+        // western
+        case 'colombo' : postal_code_txt.val("00100");break;
+        case 'gampaha' : postal_code_txt.val("11870");break;
+        case 'kalutara' : postal_code_txt.val("12000");break;
+    }
+}
+
+const choose_gender = (selectedGender,genderIcon)=>{
+    switch (selectedGender){
+        case 'male' : genderIcon.replaceWith("<i class=\"fa-solid fa-person fa-2xl\" style=\"color: #74C0FC;\"></i>");break;
+        case 'female' : genderIcon.replaceWith("<i class=\"fa-solid fa-person-dress fa-2xl\" style=\"color: #fe1667;\"></i>");break;
+        case 'other' : genderIcon.replaceWith("<i class=\"fa-solid fa-person-half-dress fa-2xl\" style=\"color: #FF9800;\"></i>");break;
+        case 'rather-not-say' : genderIcon.replaceWith("<i class=\"fa-solid fa-neuter fa-2xl\" style=\"color: #4cfe0b;\"></i>");break;
+    }
+}
+
+const choose_level = (selectedLevel,iconLevel)=>{
+    switch (selectedLevel){
+        case 'red' : iconLevel.css("-webkit-text-fill-color","#F31A16");break;
+        case 'bronze' : iconLevel.css("-webkit-text-fill-color","#FDB835");break;
+        case 'silver' : iconLevel.css("-webkit-text-fill-color","#A6A8AB");break;
+        case 'gold' : iconLevel.css("-webkit-text-fill-color","#8F784D");break;
+        case 'platinum' : iconLevel.css("-webkit-text-fill-color","#18242C");break;
+    }
+}
 
 var central_remove_then_Add = function () {
     $("select.address_main_city").find("option").remove().end().append(
