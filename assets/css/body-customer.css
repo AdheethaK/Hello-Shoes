@@ -1,190 +1,22 @@
-#body-customer{
-    width: 100%;
-    height: 100%;
-
-    background-color:black;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -100%;
-    right: 0;
-    margin: auto;
-
-    z-index: 0;
-
-    display: grid;
-    grid-template-columns: [col1-first] 5% [col2] 36% [col3] 4% [col4] 55% [col4-fin];
-    grid-template-rows: [start] 100% [fin];
-
-}
-/*1st div*/
-#body-customer > div:first-of-type{
-    grid-column-start: col1-first;
-    background-color: white;
-    position: relative;
-}
-#body-customer > div:first-of-type > button{
-    position: absolute;
-    top: 1%;
-    left: 0;
-    right: 0;
-    margin: auto;
-
-    width: 65%;
-    aspect-ratio: 1/1;
-    background-color: #FDC611;
-
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
+/*-------Customer Form Body : 1st div : p : 1st of type ---------*/
 #body-customer > div:first-of-type >p:first-of-type{
-    rotate: -90deg;
-    /*background-color: pink;*/
-
-    position: absolute;
-    top: 60%;
-    left: 0;
-    right: 0;
-    /*bottom: 0;*/
-    /*bottom: 2%;*/
-
-    font-family: "Inter",sans-serif;
-    font-weight: 900;
-    -webkit-font-smoothing: antialiased;
-    text-transform: uppercase;
     -webkit-text-fill-color: darkblue;
     font-size: 3vw;
     text-shadow: 5px 5px 0px deepskyblue, 3px 3px 0px lightgrey;
 
 }
-/*2nd div*/
+/*------- Customer Form Body : 2nd div---------*/
 #body-customer > div:nth-of-type(2){
-    grid-column-start: col2;
-    background-color: lightgrey;
-
-    display: grid;
-    grid-template-columns: [start] 100% [fin];
     grid-template-rows: [row1-start] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr [row6] 1fr [row7] 1fr [row8]
  1fr [row9] 1fr [row10] 1fr [row11] 1fr [row12] 1fr [row13] 1fr [row14] 1fr [row15] 1fr [row15-fin];
 }
-#body-customer > div:nth-of-type(2) > .customer-box{
-    grid-column-start: start;
-    grid-column-end: fin;
-    background-color: white;
-    /*border: 1px grey solid;*/
-
-    position: relative;
-
-    display: grid;
-    grid-template-columns: [col1-start] 1.5fr [col2] 2.5fr [col2-fin];
-    grid-template-rows: [row1-start] 2fr [row2] 1fr [row2-fin];
-}
-#body-customer > div:nth-of-type(2) > .customer-box > .input-lbl{
-    grid-column-start: col1-start;
-    /*grid-column-end: col2;*/
-    grid-row-start: row1-start;
-    /*grid-row-end: row2;*/
-
-    background-color: white;
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: dimgrey;
-    font-size: 1.3vw;
-    align-content: space-evenly;
-    text-align: right;
-}
-#body-customer > div:nth-of-type(2) > .customer-box > .input-txt{
-    border:none;
-    outline:none;
-    display:inline-block;
-
-    /*padding: 10px 0;*/
-    /*margin-bottom: 30px;*/
-    border-bottom: 2px solid lightgrey;
-    background-color: transparent;
-
-    font-size: 1vw;
-    /*border-bottom: 3px solid darkblue;*/
-    font-family: "Prosto One", sans-serif;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: dimgrey;
-}
-.input-txt::placeholder{
-    -webkit-text-fill-color: lightgrey;
-}
-.date-picker{
-    grid-column-start: col2;
-    /*grid-column-end: col2;*/
-    grid-row-start: row1;
-    /*grid-row-end: row2;*/
-    background-color: white;
-}
-#body-customer > div:nth-of-type(2) > .customer-box > .error{
-    grid-column-start: col2;
-    /*grid-column-end: col2;*/
-    grid-row-start: row2;
-    /*grid-row-end: row2;*/
-
-    background-color: white;
-    font-family: "Julius Sans One", sans-serif;
-    /*font-weight: 400;*/
-    font-style: normal;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: red;
-    font-size: 0.8vw;
-    font-weight: bold;
-    align-content: space-evenly;
-    text-align: right;
-}
-.choose-gender , .choose-status , .choose-designation , .choose-access-role{
-    display: grid;
-    grid-template-rows: [start] 1fr [end];
-    grid-template-columns: [col1-start] 0.6fr [col2] 5.4fr [col2-fin];
-}
-.gender , .status , .designation , .access-role{
-    grid-column-start: col2;
-    grid-row-start: start;
-
-    border: 0px;
-    outline: 0px;
-    border-bottom: 2px solid lightgrey;
-    background-color: white;
-    font-size: 1vw;
-    /*border-bottom: 3px solid darkblue;*/
-    font-family: "Prosto One", sans-serif;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: dimgrey;
-    /*text-transform: uppercase;*/
-    /*-webkit-text-fill-color: red;*/
-    /*font-size: 1vw;*/
-    align-content: space-evenly;
-    text-align: left;
-}
+/*------- Customer Form Body : 2nd div : .[]-box:nth-of-type(5) : .choose-level ---------*/
 #body-customer > div:nth-of-type(2) > .customer-box:nth-of-type(5) > .choose-level{
     display: grid;
     grid-template-rows: [start] 1fr [end];
     grid-template-columns: [col1-start] 0.6fr [col2] 5.4fr [col2-fin];
 }
-.icon{
-    grid-column-start: col1-start;
-    grid-row-start: start;
-    background-color: transparent;
-
-    position: relative;
-}
-.icon > i{
-    position: absolute;
-    left: 5.5px;
-    top: 15px;
-    padding: 0;
-    display: block;
-}
-
-#levels{
+.level{
     grid-column-start: col2;
     grid-row-start: start;
 
@@ -194,33 +26,19 @@
     background-color: white;
     font-size: 1vw;
     font-family: "Prosto One", sans-serif;
-    -webkit-text-fill-color: grey;
     align-content: space-evenly;
     text-align: left;
 }
-.address_main_state{
-    border: 0px;
-    outline: 0px;
-    border-bottom: 2px solid lightgrey;
-    background-color: white;
+#input-customer-level,
+#input-customer-gender,
+#input-customer-address-main-city,
+#input-customer-address-main-state,
+#input-customer-joined-date,
+#input-customer-dob {
+    -webkit-text-fill-color: lightgrey;
     font-size: 1vw;
-    font-family: "Prosto One", sans-serif;
-    -webkit-text-fill-color:grey;
-    align-content: space-evenly;
-    text-align: left;
 }
-.address_main_city{
-    border: 0px;
-    outline: 0px;
-    border-bottom: 2px solid lightgrey;
-    background-color: white;
-    font-size: 1vw;
-    font-family: "Prosto One", sans-serif;
-    -webkit-text-fill-color: grey;
-    align-content: space-evenly;
-    text-align: left;
-}
-/*--------3rd div : btn panel -----*/
+/*------- Customer Form Body : 3rd div : div:nth-of-type(2) : button ---------*/
 #body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:hover {background-color: #3E2E0C}
 
 #body-customer > div:nth-of-type(3) > div:nth-of-type(2) > button:active {
@@ -228,109 +46,22 @@
     box-shadow: 0 5px lightgrey;
     transform: translateY(4px);
 }
-/*4th div*/
-#body-customer > div:nth-of-type(4){
-    grid-column-start: col4;
-    background-color: white;
-
-    display: grid;
-    grid-template-columns: [start] 1fr [fin];
-    grid-template-rows: [row1-start] 0.5fr [row2] 9.5fr [row2-fin];
-    row-gap: 4px;
-}
-#body-customer > div:nth-of-type(4) > div:first-of-type{
-    grid-column-start: start;
-    grid-row-start: row1-start;
-
-    background-color: white;
-    display: grid;
-    grid-template-columns: [col1-start] 10.3fr [col2] 0.7fr [col2-fin];
-    grid-template-rows: [start] 1fr [fin];
-
-    justify-items:center ;
-}
-.tbl-search-btn{
-    grid-column-start: col2;
+/*------- Customer Form Body : 4th div : div:first-of-type : .tbl.search.btn ---------*/
+#body-customer > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn{
     background-color: darkblue;
-
-    border: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
     box-shadow: lightskyblue 2.4px 2.4px 3.2px;
-
-    height: 90%;
-    width: 95%;
-    position: relative;
-    top: 3px;
-    -webkit-text-fill-color: white;
 }
-.tbl-search-btn:hover {background-color: lightgrey}
-
-.tbl-search-btn:active {
-    background-color: lightgrey;
+#body-customer > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active {
     box-shadow: 0 1.5px darkblue;
-    transform: translateY(2px);
 }
+/*------- Customer Form Body : 4th div : div:first-of-type : input ---------*/
 #body-customer > div:nth-of-type(4) > div:first-of-type > input{
-    grid-column-start: col1-start;
-    grid-row-start: start;
-
-    width: 100%;
-    height: 80%;
-    position: relative;
-    top: 3px;
-
-    border:none;
-    outline:none;
-    display:inline-block;
-
     border-bottom: 2px solid darkblue;
-    background-color: whitesmoke;
-
-    font-size: 1.3vw;
-    /*border-bottom: 3px solid darkblue;*/
-    font-family: "Prosto One", sans-serif;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: dimgrey;
-    text-align: left;
     box-shadow: darkblue 2.4px 2.4px 3.2px;
 }
-#body-customer > div:nth-of-type(4) > div:nth-of-type(2){
-    grid-column-start: start;
-    grid-row-start: row2;
-
-    background-color:white;
-    overflow: scroll;
-}
 /*---------------------table--------------------*/
-td, th{
-    border: 2px solid white;
-    padding: 8px;
-    border-radius: 10px;
-}
-#customer-tbl{
-    border-collapse: collapse;
-    /*table-layout: fixed;*/
-    background-color: whitesmoke;
-}
-thead th {
-    /*width: calc(100%/7);*/
-    font-weight: bolder;
-
-    background-color: lightskyblue;
-    -webkit-text-fill-color: #3E2E0C;
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 1.3vw;
-}
-tbody{
-    /*-webkit-text-fill-color: lightgrey;*/
-    font-size: 1.3vw;
-    /*border-bottom: 3px solid darkblue;*/
-    font-family: "Prosto One", sans-serif;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: dimgrey;
-    text-align: left;
-    /*word-break: break-all;*/
+#customer-tbl > thead th {
+    background-color:  lightskyblue;
 }
 .tbl-lvl > .icon-tbl > i{
     -webkit-text-fill-color: red;

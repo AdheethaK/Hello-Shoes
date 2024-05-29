@@ -65,7 +65,19 @@ $("#body-user-service > div > .btn-back-to-menu").on('click',()=>{
     $("#body-user-service").css("left","-100%").css("z-index",0);
     $("#body-menu").css("z-index",1);
 })
+
+const change_select_to_dark_grey = (changedInputSelect)=>{
+    $(changedInputSelect).css("-webkit-text-fill-color","grey");
+}
 $(document).ready(function(){
+    // change select on change : Customer
+    $("#input-customer-gender").change(function () { change_select_to_dark_grey($("#input-customer-gender")) });
+    $("#input-customer-joined-date").change(function () { change_select_to_dark_grey($("#input-customer-joined-date")) });
+    $("#input-customer-level").change(function () { change_select_to_dark_grey($("#input-customer-level")) });
+    $("#input-customer-dob").change(function () { change_select_to_dark_grey($("#input-customer-dob")) });
+    $("#input-customer-address-main-city").change(function () { change_select_to_dark_grey($("#input-customer-address-main-city")) });
+    $("#input-customer-address-main-state").change(function () { change_select_to_dark_grey($("#input-customer-address-main-state")) });
+
     // choose level for customer
     $(".customer-box > .choose-level > select.level").change(function(){
         var selectedLevel = $(this).children("option:selected").val();

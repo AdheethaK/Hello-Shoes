@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <title>Hello Shoes</title>
 
-    <link rel="stylesheet" href="assets/css/CRUDbtn-panel.css">
+    <link rel="stylesheet" href="assets/css/FormStyles.css">
     <link rel="stylesheet" href="assets/css/body-login.css">
     <link rel="stylesheet" href="assets/css/body-menu.css">
     <link rel="stylesheet" href="assets/css/body-sale.css">
     <link rel="stylesheet" href="assets/css/body-supplier.css">
     <link rel="stylesheet" href="assets/css/body-customer.css">
-    <link rel="stylesheet" href="assets/css/body-calender.css">
     <link rel="stylesheet" href="assets/css/body-employee.css">
     <link rel="stylesheet" href="assets/css/body-inventory.css">
     <link rel="stylesheet" href="assets/css/body-admin.css">
@@ -110,9 +109,147 @@
         <button class="btn-back-to-menu"><img src="assets/img/arrow-left.png" alt="" height="60%" width="auto"> </button>
         <p>SALE</p>
     </div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div>
+        <div class="sale-box">
+            <label class="input-lbl">Item Code :  </label>
+            <select class="item_code_sale">
+                <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select item code</option>
+            </select>
+            <label class="error">there is an error in item code</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Order No :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in order no.</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Customer Name :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in customer name</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Item Description :    </label>
+            <textarea cols="30" rows="3" class="input-txt"></textarea>
+            <label class="error">there is an error in item description</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Size :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in size</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Unit Price :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in unit price</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Item QTY :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in item qty</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Total Price :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in total price</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">purchased date :    </label>
+            <input type="date" name="sale_purchased_date" id="sale_purchased_date" class="date-picker">
+            <label class="error">there is an error in purchased date</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Payment Method :  </label>
+            <select class="payment_method">
+                <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select payment method</option>
+                <option value="debit-card-payment">Debit Card Payment</option>
+                <option value="credit-card-payment">Credit Card Payment</option>
+                <option value="prepaid-card-payment">PrePaid Card Payment</option>
+                <option value="cash">Cash</option>
+                <option value="cheques">Cheques</option>
+                <option value="mobile-payment">Mobile Payment</option>
+                <option value="upi-&-QR-codes">UPI & QR Codes</option>
+            </select>
+            <label class="error">there is an error in payment method</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Added Points :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in added points</label>
+        </div>
+        <div class="sale-box">
+            <label class="input-lbl">Cashier Name :    </label>
+            <input type="text" class="input-txt">
+            <label class="error">there is an error in cashier name</label>
+        </div>
+    </div>
+    <div>
+        <div></div>
+        <div>
+            <button id="sale-btn-new-id"><i class="fa-solid fa-plus fa-xl sale-btn-new-id" style="color: darkblue;"></i></button>
+            <button id="sale-btn-save"><i class="fa-solid fa-check fa-xl sale-btn-save" style="color: darkblue;"></i></button>
+            <button id="sale-btn-search"><i class="fa-solid fa-magnifying-glass fa-xl sale-btn-search" style="color: darkblue;"></i></button>
+            <button id="sale-btn-update"><i class="fa-solid fa-rotate-right fa-xl sale-btn-update" style="color: darkblue;"></i></button>
+            <button id="sale-btn-delete"><i class="fa-solid fa-trash fa-xl sale-btn-delete" style="color: darkblue;"></i></button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <button class="tbl-search-btn"><i class="fa-solid fa-magnifying-glass fa-xl inventory-btn-search" style="color: darkblue;"></i></button>
+            <input type="text">
+        </div>
+        <div>
+            <table id="sale-tbl">
+                <thead>
+                <tr>
+                    <th>order no.</th>
+                    <th>item code</th>
+                    <th>customer name</th>
+                    <th>size</th>
+                    <th>unit price</th>
+                    <th>item QTY</th>
+                    <th>total price</th>
+                    <th>purchased date</th>
+                    <th>points</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>O001</td>
+                    <td>I045</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                <tr>
+                    <td>O002</td>
+                    <td>I045</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                <tr>
+                    <td>O003</td>
+                    <td>I045</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <div id="body-supplier">
     <div>
@@ -191,11 +328,11 @@
     <div>
         <div></div>
         <div>
-            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
+            <button id="supplier-btn-new-id"><i class="fa-solid fa-plus fa-xl supplier-btn-new-id" style="color: darkblue;"></i></button>
+            <button id="supplier-btn-save"><i class="fa-solid fa-check fa-xl supplier-btn-save" style="color: darkblue;"></i></button>
+            <button id="supplier-btn-search"><i class="fa-solid fa-magnifying-glass fa-xl supplier-btn-search" style="color: darkblue;"></i></button>
+            <button id="supplier-btn-update"><i class="fa-solid fa-rotate-right fa-xl supplier-btn-update" style="color: darkblue;"></i></button>
+            <button id="supplier-btn-delete"><i class="fa-solid fa-trash fa-xl supplier-btn-delete" style="color: darkblue;"></i></button>
         </div>
     </div>
     <div>
@@ -245,19 +382,19 @@
     <div>
         <div class="customer-box">
             <label class="input-lbl">Customer Code :    </label>
-            <input type="text" class="input-txt">
+            <input id="input-customer-code" type="text" class="input-txt">
             <label class="error">there is an error in customer code</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Customer name :    </label>
-            <input type="text" class="input-txt">
+            <input id="input-customer-name" type="text" class="input-txt">
             <label class="error">there is an error in customer name</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Gender :</label>
             <div class="choose-gender">
                 <div class="icon"><i></i></div>
-                <select id="genders" class="gender">
+                <select id="input-customer-gender" class="gender">
                     <option value="" disabled selected class="placeholder-select" style="color: #2d3667">Select customer gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -269,14 +406,14 @@
         </div>
         <div class="customer-box">
             <label class="input-lbl">joined date :    </label>
-            <input type="date" name="joined_date" id="joined_date" class="date-picker">
+            <input id="input-customer-joined-date" type="date" name="joined_date" id="joined_date" class="date-picker">
             <label class="error">there is an error in joined date</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Level :    </label>
             <div class="choose-level">
-                <div class="icon"><i class="fa-solid fa-star fa-xl" style="color: transparent;"></i></div>
-                <select id="levels" class="level">
+                <div class="icon" style="z-index: 2"><i class="fa-solid fa-star fa-xl" style="color: transparent;"></i></div>
+                <select id="input-customer-level" class="level">
                     <option value="" disabled selected class="placeholder-select">Select customer level</option>
                     <option value="red">Red</option>
                     <option value="bronze">Bronze</option>
@@ -289,34 +426,34 @@
         </div>
         <div class="customer-box">
             <label class="input-lbl">Total points :    </label>
-            <input type="text" class="input-txt">
+            <input id="input-customer-total-points" type="text" class="input-txt">
             <label class="error">there is an error in total points</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Date Of Birth :    </label>
-            <input type="date" name="joined_date" id="dob" class="date-picker">
+            <input id="input-customer-dob" type="date" name="joined_date" class="date-picker">
             <label class="error">there is an error in date of birth</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Address :    </label>
-            <input type="text" class="input-txt" placeholder="Building.No or Name">
+            <input id="input-customer-address-building-no-or-name" type="text" class="input-txt" placeholder="Building.No or Name">
             <label class="error">there is an error in building.no/name</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl"></label>
-            <input type="text" class="input-txt" placeholder="Lane">
+            <input id="input-customer-address-lane" type="text" class="input-txt" placeholder="Lane">
             <label class="error">there is an error in lane</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl"></label>
-            <select id="address_main_city" class="address_main_city">
+            <select id="input-customer-address-main-city" class="address_main_city">
                 <option value="" disabled selected class="placeholder-select" style="color: lightgray">Main City</option>
             </select>
             <label class="error">there is an error in main city</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl"></label>
-            <select id="address_main_state" class="address_main_state">
+            <select id="input-customer-address-main-state" class="address_main_state">
                 <option value="" disabled selected class="placeholder-select" style="color: lightgray">Main State</option>
                 <option value="central">Central</option>
                 <option value="eastern">Eastern</option>
@@ -332,33 +469,33 @@
         </div>
         <div class="customer-box">
             <label class="input-lbl"></label>
-            <input type="text" class="input-txt postal-code-txt" placeholder="Postal Code">
+            <input id="input-customer-address-postal-code" type="text" class="input-txt postal-code-txt" placeholder="Postal Code">
             <label class="error">there is an error in postal code</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Contact No :    </label>
-            <input type="text" class="input-txt">
+            <input id="input-customer-contact-no" type="text" class="input-txt">
             <label class="error">there is an error in contact.no</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Email :    </label>
-            <input type="text" class="input-txt">
+            <input id="input-customer-email" type="text" class="input-txt">
             <label class="error">there is an error in email</label>
         </div>
         <div class="customer-box">
             <label class="input-lbl">Recent Purchase :    </label>
-            <input type="text" class="input-txt">
+            <input id="input-customer-recent-purchase" type="text" class="input-txt">
             <label class="error">there is an error in recent purchase</label>
         </div>
     </div>
     <div>
         <div></div>
         <div>
-            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
+            <button id="customer-btn-new-id"><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
+            <button id="customer-btn-save"><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
+            <button id="customer-btn-search"><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
+            <button id="customer-btn-update"><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
+            <button id="customer-btn-delete"><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
         </div>
     </div>
     <div>
@@ -372,8 +509,16 @@
                     <tr>
                         <th>code</th>
                         <th>name</th>
+                        <th>gender</th>
+                        <th>joined date</th>
                         <th>level</th>
                         <th>total points</th>
+                        <th>dob</th>
+                        <th>address : building no. or name</th>
+                        <th>address : lane</th>
+                        <th>address : main city</th>
+                        <th>address : main state</th>
+                        <th>address : postal code</th>
                         <th>contact no.</th>
                         <th>email</th>
                         <th>recent purchase</th>
@@ -383,7 +528,15 @@
                     <tr>
                         <td>C001</td>
                         <td>Kasun Chamara</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
                         <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
@@ -391,8 +544,16 @@
                     </tr>
                     <tr>
                         <td>C002</td>
+                        <td>Kasun Chamara</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
@@ -400,8 +561,16 @@
                     </tr>
                     <tr>
                         <td>C003</td>
+                        <td>Kasun Chamara</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
@@ -409,17 +578,33 @@
                     </tr>
                     <tr>
                         <td>C004</td>
+                        <td>Kasun Chamara</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
-                        <td>12,000</td>
                         <td>dummy</td>
-                        <td>kasunChamara@gmail.com</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                     </tr>
                     <tr>
                         <td>C005</td>
+                        <td>Kasun Chamara</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td class="tbl-lvl"><div class="icon-tbl"><i class="fa-solid fa-star fa-xl" style="color: red;"></i></div></td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
+                        <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
                         <td>dummy</td>
@@ -601,14 +786,75 @@
     <div>
         <div></div>
         <div>
-            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
+            <button id="employee-btn-new-id"><i class="fa-solid fa-plus fa-xl employee-btn-new-id" style="color: darkblue;"></i></button>
+            <button id="employee-btn-save"><i class="fa-solid fa-check fa-xl employee-btn-save" style="color: darkblue;"></i></button>
+            <button id="employee-btn-search"><i class="fa-solid fa-magnifying-glass fa-xl employee-btn-search" style="color: darkblue;"></i></button>
+            <button id="employee-btn-update"><i class="fa-solid fa-rotate-right fa-xl employee-btn-update" style="color: darkblue;"></i></button>
+            <button id="employee-btn-delete"><i class="fa-solid fa-trash fa-xl employee-btn-delete" style="color: darkblue;"></i></button>
         </div>
     </div>
-    <div></div>
+    <div>
+        <div>
+            <button class="tbl-search-btn"><i class="fa-solid fa-magnifying-glass fa-xl inventory-btn-search" style="color: darkblue;"></i></button>
+            <input type="text">
+        </div>
+        <div>
+            <table id="employee-tbl">
+                <thead>
+                <tr>
+                    <th>code</th>
+                    <th>name</th>
+                    <th>image</th>
+                    <th>designation</th>
+                    <th>access role</th>
+                    <th>attached branch</th>
+                    <th>contact.no</th>
+                    <th>email</th>
+                    <th>inform in case of emergency</th>
+                    <th>emergency contact</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>C001</td>
+                    <td>Kasun Chamara</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                <tr>
+                    <td>C002</td>
+                    <td>Kasun Chamara</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                <tr>
+                    <td>C003</td>
+                    <td>Kasun Chamara</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                    <td>dummy</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <div id="body-inventory">
     <div>
@@ -634,7 +880,7 @@
                 </div>
                 <div>
                     <button class="item-img-choose-save">
-                        <i class="fa-solid fa-pencil fa-xl customer-btn-save" style="color: greenyellow;"></i>
+                        <i class="fa-solid fa-pencil fa-xl customer-btn-save" style="color: darkblue;"></i>
                     </button>
                 </div>
                 <div></div>
@@ -710,11 +956,11 @@
     <div>
         <div></div>
         <div>
-            <button><i class="fa-solid fa-plus fa-xl customer-btn-new-id" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-check fa-xl customer-btn-save" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass fa-xl customer-btn-search" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-rotate-right fa-xl customer-btn-update" style="color: darkblue;"></i></button>
-            <button><i class="fa-solid fa-trash fa-xl customer-btn-delete" style="color: darkblue;"></i></button>
+            <button id="inventory-btn-new-id"><i class="fa-solid fa-plus fa-xl inventory-btn-new-id" style="color: darkblue;"></i></button>
+            <button id="inventory-btn-save"><i class="fa-solid fa-check fa-xl inventory-btn-save" style="color: darkblue;"></i></button>
+            <button id="inventory-btn-search"><i class="fa-solid fa-magnifying-glass fa-xl inventory-btn-search" style="color: darkblue;"></i></button>
+            <button id="inventory-btn-update"><i class="fa-solid fa-rotate-right fa-xl inventory-btn-update" style="color: darkblue;"></i></button>
+            <button id="inventory-btn-delete"><i class="fa-solid fa-trash fa-xl inventory-btn-delete" style="color: darkblue;"></i></button>
         </div>
     </div>
     <div>
@@ -786,5 +1032,14 @@
 <script src="https://kit.fontawesome.com/c18851e2e3.js" crossorigin="anonymous"></script>
 <script src="assets/lib/jquery.min.js"></script>
 <script src="assets/js/script.js"></script>
+
+<script type="module" src="controller/CustomerController.js"></script>
+<script type="module" src="controller/EmployeeController.js"></script>
+<script type="module" src="controller/InventoryController.js"></script>
+<script type="module" src="controller/SaleController.js"></script>
+<script type="module" src="controller/SupplierController.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

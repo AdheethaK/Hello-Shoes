@@ -1,126 +1,25 @@
-#body-employee{
-    width: 100%;
-    height: 100%;
-
-    background-color:black;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -100%;
-    right: 0;
-    margin: auto;
-
-    z-index: 0;
-
-    display: grid;
-    grid-template-columns: [col1-first] 5% [col2] 36% [col3] 4% [col4] 55% [col4-fin];
-    grid-template-rows: [start] 100% [fin];
-
-}
-#body-employee > div:first-of-type{
-    grid-column-start: col1-first;
-    background-color: white;
-    position: relative;
-}
-#body-employee > div:first-of-type > button{
-    position: absolute;
-    top: 1%;
-    left: 0;
-    right: 0;
-    margin: auto;
-
-    width: 65%;
-    aspect-ratio: 1/1;
-    background-color: #FDC611;
-
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
+/*------- Employee Form Body : 1st div : p : 1st of type ---------*/
 #body-employee > div:first-of-type >p:first-of-type{
-    rotate: -90deg;
-    /*background-color: pink;*/
-
-    position: absolute;
-    top: 60%;
-    left: 0;
-    right: 0;
-    /*bottom: 0;*/
-    /*bottom: 2%;*/
-
-    font-family: "Inter",sans-serif;
-    font-weight: 900;
-    -webkit-font-smoothing: antialiased;
-    text-transform: uppercase;
     -webkit-text-fill-color: crimson;
     font-size: 3vw;
     text-shadow: 5px 5px 0px pink, 3px 3px 0px pink;
 
 }
+/*------- Employee Form Body : 2nd div---------*/
 #body-employee > div:nth-of-type(2){
-    grid-column-start: col2;
-    background-color: lightgrey;
-
-    display: grid;
-    grid-template-columns: [start] 100% [fin];
     grid-template-rows: [row1-start] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr [row6] 1fr [row7] 1fr [row8]
  1fr [row9] 1fr [row10] 1fr [row11] 1fr [row12] 1fr [row12-fin];
 
     overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: thin;          /* "auto" or "thin" */
     scrollbar-color: lightgrey white;   /* scroll thumb and track */
 }
-#body-employee > div:nth-of-type(2) > .employee-box{
-    grid-column-start: start;
-    grid-column-end: fin;
-    background-color: sandybrown;
-    border: 1px grey solid;
-
-    position: relative;
-
-    display: grid;
-    grid-template-columns: [col1-start] 1.5fr [col2] 2.5fr [col2-fin];
-    grid-template-rows: [row1-start] 2fr [row2] 1fr [row2-fin];
-}
-#body-employee > div:nth-of-type(2) > .employee-box > .input-lbl{
-    grid-column-start: col1-start;
-    grid-row-start: row1-start;
-
-    background-color: white;
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    -webkit-text-fill-color: dimgrey;
-    font-size: 1.3vw;
-    align-content: space-evenly;
-    text-align: right;
-}
-#body-employee > div:nth-of-type(2) > .employee-box > .input-txt{
-    border:none;
-    outline:none;
-    display:inline-block;
-
-    border-bottom: 2px solid lightgrey;
-    background-color: transparent;
-
-    font-size: 1vw;
-    font-family: "Prosto One", sans-serif;
-    -webkit-text-fill-color: dimgrey;
-}
+/*------- Employee Form Body : 2nd div : .box : .error ---------*/
 #body-employee > div:nth-of-type(2) > .employee-box > .error{
-    grid-column-start: col2;
-    grid-row-start: row2;
-
-    background-color: white;
-    font-family: "Julius Sans One", sans-serif;
-    font-style: normal;
-    -webkit-text-fill-color: red;
-    font-size: 0.8vw;
-    font-weight: bold;
-    align-content: space-evenly;
-    text-align: right;
+    margin-bottom: 3px;
 }
+/*------- Employee Form Body : 2nd div : .box:nth-of-type(3) ---------*/
 #body-employee > div:nth-of-type(2) > .employee-box:nth-of-type(3){
     /*background-color: #8AD788;*/
     height: 180px;
@@ -188,20 +87,34 @@
     /*background-color: #e4eded;*/
 }
 
-/*----------- btn panel -------------*/
-#body-employee > div:nth-of-type(3){
-    grid-column-start: col3;
-    background-color: white;
+/*------- Employee Form Body : 3rd div : div:nth-of-type(2) : button ---------*/
+#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:hover {
+    background-color: lightgrey;
 }
-#body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:hover {background-color: #3E2E0C}
-
 #body-employee > div:nth-of-type(3) > div:nth-of-type(2) > button:active {
     background-color: crimson;
     box-shadow: 0 5px pink;
     transform: translateY(4px);
 }
-/*------------- Employee Table ------*/
-#body-employee > div:nth-of-type(4){
-    grid-column-start: col4;
-    background-color: lightsalmon;
+/*------- Employee Form Body : 4th div : div:first-of-type : .tbl.search.btn ---------*/
+#body-employee > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn{
+    background-color: crimson;
+    box-shadow: pink 2.4px 2.4px 3.2px;
+}
+#body-employee > div:nth-of-type(4) > div:first-of-type >.tbl-search-btn:active {
+    box-shadow: 0 1.5px crimson;
+}
+/*------- Employee Form Body : 4th div : div:first-of-type : input ---------*/
+#body-employee > div:nth-of-type(4) > div:first-of-type > input{
+    border-bottom: 2px solid crimson;
+    box-shadow: crimson 2.4px 2.4px 3.2px;
+}
+/*---------------------table--------------------*/
+#employee-tbl > thead th {
+    background-color: pink;
+}
+.inventory-tbl-img{
+    height: 100px;
+    width: 80px;
+    /*background-color: #C5ACE3;*/
 }

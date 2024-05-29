@@ -180,6 +180,8 @@
     font-weight: bold;
     align-content: space-evenly;
     text-align: right;
+    
+    opacity: 0;
 }
 /*------- Form Body : 2nd div : .[]-box : div---------*/
 .choose-gender ,
@@ -204,13 +206,7 @@
     border-bottom: 2px solid lightgrey;
     background-color: white;
     font-size: 1vw;
-    /*border-bottom: 3px solid darkblue;*/
     font-family: "Prosto One", sans-serif;
-    /*text-transform: uppercase;*/
-    -webkit-text-fill-color: dimgrey;
-    /*text-transform: uppercase;*/
-    /*-webkit-text-fill-color: red;*/
-    /*font-size: 1vw;*/
     align-content: space-evenly;
     text-align: left;
 }
@@ -240,7 +236,6 @@
     background-color: white;
     font-size: 1vw;
     font-family: "Prosto One", sans-serif;
-    -webkit-text-fill-color:grey;
     align-content: space-evenly;
     text-align: left;
 }
