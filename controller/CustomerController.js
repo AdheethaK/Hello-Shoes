@@ -40,7 +40,34 @@ $("#customer-btn-save").on('click',() =>{
 })
 // -------- 03. Update Customer --------------
 $("#customer-btn-update").on('click',()=>{
-    alert("customer update : )")
+    let customer = get_object_customer();
+
+    //create JSON
+    const customerJSON = JSON.stringify(customer)
+
+    //send data to endpoint via ajax
+    // AJAX - JQuery
+    $.ajax({
+        url : "http://localhost:8080/HelloShoes/api/v1/customer",
+        type : "PUT",
+        data : customerJSON ,
+        headers : {"Content-Type":"application/json"} ,
+        success : (resp) => {
+            console.log("resp:"+resp)
+            Swal.fire(
+                'Updated!',
+                'Customer has been updated! : '+resp,
+                'success'
+            )
+        },
+        error : (err) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Input :' + resp,
+                text: err
+            })
+        }
+    });
 })
 // -------- 04. Search Customer --------------
 $("#customer-btn-search").on('click',()=>{
@@ -60,12 +87,9 @@ $("#customer-btn-search").on('click',()=>{
                 fill_all_fields_customer(customer)
                 Swal.fire(
                     'Success!',
-                    'Customer has been saved successfully!',
+                    'Customer has been searched successfully!',
                     'success'
                 );
-                // let customer = $.parseJSON(customerJSON)
-                // console.log(customer.customer_name)
-                // fill_all_fields_customer(customer)
             },
         error : (err) => {
             Swal.fire({
@@ -76,6 +100,35 @@ $("#customer-btn-search").on('click',()=>{
         }
     });
 })
+const search_customer = ()=>{
+    let customer_code = $('#input-customer-code').val();
+    // send data to endpoint via ajax
+    // AJAX - JQuery
+    $.ajax({
+        traditional : true,
+        url : "http://localhost:8080/HelloShoes/api/v1/customer",
+        type : "GET",
+        data : {"customerCode" : customer_code},
+        headers : {"Content-Type":"application/json"} ,
+        success:
+            function (customer){
+                console.log(customer);
+                fill_all_fields_customer(customer)
+                Swal.fire(
+                    'Success!',
+                    'Customer has been searched successfully!',
+                    'success'
+                );
+            },
+        error : (err) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Input',
+                text: err
+            })
+        }
+    });
+}
 // -------- 05. Delete Customer --------------
 $("#customer-btn-delete").on('click',()=>{
     alert("customer delete : )")
