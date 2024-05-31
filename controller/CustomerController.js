@@ -131,7 +131,31 @@ const search_customer = ()=>{
 }
 // -------- 05. Delete Customer --------------
 $("#customer-btn-delete").on('click',()=>{
-    alert("customer delete : )")
+    let customer_code = $('#input-customer-code').val();
+
+    $.ajax({
+        traditional : true,
+        url : "http://localhost:8080/HelloShoes/api/v1/customer?"  + $.param({
+            "customerCode": customer_code,
+        }),
+        type : "DELETE",
+        method : "DELETE" ,
+        headers : {"Content-Type":"application/json"} ,
+        success : (resp) => {
+            Swal.fire(
+                'Success!',
+                'Customer has been deleted successfully!',
+                'success'
+            );
+        },
+        error : (err) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Input',
+                text: err
+        })
+        }
+    });
 })
 // -------- 06. New ID Customer --------------
 $("#customer-btn-new-id").on('click',()=>{
